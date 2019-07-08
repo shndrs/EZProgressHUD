@@ -27,6 +27,8 @@
 		F4EAFB7D22D33C4D00689062 /* XRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EAFB7C22D33C4D00689062 /* XRotation.swift */; };
 		F4EAFB7F22D33CA300689062 /* XYRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EAFB7E22D33CA300689062 /* XYRotation.swift */; };
 		F4EAFB8122D33CC100689062 /* YRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EAFB8022D33CC100689062 /* YRotation.swift */; };
+		F4EAFB8322D33D1900689062 /* AntColony.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EAFB8222D33D1900689062 /* AntColony.swift */; };
+		F4EAFB8522D33D3400689062 /* HNK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EAFB8422D33D3400689062 /* HNK.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		F4EAFB7C22D33C4D00689062 /* XRotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XRotation.swift; sourceTree = "<group>"; };
 		F4EAFB7E22D33CA300689062 /* XYRotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYRotation.swift; sourceTree = "<group>"; };
 		F4EAFB8022D33CC100689062 /* YRotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YRotation.swift; sourceTree = "<group>"; };
+		F4EAFB8222D33D1900689062 /* AntColony.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntColony.swift; sourceTree = "<group>"; };
+		F4EAFB8422D33D3400689062 /* HNK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNK.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +212,8 @@
 				F4EAFB7C22D33C4D00689062 /* XRotation.swift */,
 				F4EAFB7E22D33CA300689062 /* XYRotation.swift */,
 				F4EAFB8022D33CC100689062 /* YRotation.swift */,
+				F4EAFB8222D33D1900689062 /* AntColony.swift */,
+				F4EAFB8422D33D3400689062 /* HNK.swift */,
 			);
 			path = EZProgresses;
 			sourceTree = "<group>";
@@ -357,12 +363,14 @@
 				F4EAFB6E22D32FEE00689062 /* EZBaseView.swift in Sources */,
 				F4EAFB7B22D33C3300689062 /* LordOfTheRings.swift in Sources */,
 				F4EAFB6822D32EDF00689062 /* EZProgressOptions.swift in Sources */,
+				F4EAFB8322D33D1900689062 /* AntColony.swift in Sources */,
 				F4EAFB7122D3301C00689062 /* EZAnimations.swift in Sources */,
 				F4EAFB7D22D33C4D00689062 /* XRotation.swift in Sources */,
 				F4EAFB6522D32E8100689062 /* EZInterfaces.swift in Sources */,
 				F4EAFB6B22D32F9F00689062 /* EZStrings.swift in Sources */,
 				F4EAFB7422D336F100689062 /* EZFactory.swift in Sources */,
 				F4EAFB7722D3378400689062 /* HeartBeat.swift in Sources */,
+				F4EAFB8522D33D3400689062 /* HNK.swift in Sources */,
 				F4EAFB7922D33BE000689062 /* LineLayer.swift in Sources */,
 				F4EAFB8122D33CC100689062 /* YRotation.swift in Sources */,
 			);
