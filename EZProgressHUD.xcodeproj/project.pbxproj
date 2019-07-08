@@ -29,6 +29,8 @@
 		F4EAFB8122D33CC100689062 /* YRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EAFB8022D33CC100689062 /* YRotation.swift */; };
 		F4EAFB8322D33D1900689062 /* AntColony.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EAFB8222D33D1900689062 /* AntColony.swift */; };
 		F4EAFB8522D33D3400689062 /* HNK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EAFB8422D33D3400689062 /* HNK.swift */; };
+		F4EAFB8822D33FE000689062 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F4EAFB8622D33FE000689062 /* LICENSE */; };
+		F4EAFB8922D33FE000689062 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F4EAFB8722D33FE000689062 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		F4EAFB8022D33CC100689062 /* YRotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YRotation.swift; sourceTree = "<group>"; };
 		F4EAFB8222D33D1900689062 /* AntColony.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntColony.swift; sourceTree = "<group>"; };
 		F4EAFB8422D33D3400689062 /* HNK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNK.swift; sourceTree = "<group>"; };
+		F4EAFB8622D33FE000689062 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		F4EAFB8722D33FE000689062 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 		F4EAFB2922D31F2800689062 = {
 			isa = PBXGroup;
 			children = (
+				F4EAFB8622D33FE000689062 /* LICENSE */,
+				F4EAFB8722D33FE000689062 /* README.md */,
 				F4EAFB3522D31F2800689062 /* EZProgressHUD */,
 				F4EAFB4022D31F2800689062 /* EZProgressHUDTests */,
 				F4EAFB5222D3292E00689062 /* EZProgressHUDExamples */,
@@ -332,6 +338,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4EAFB8922D33FE000689062 /* README.md in Resources */,
+				F4EAFB8822D33FE000689062 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

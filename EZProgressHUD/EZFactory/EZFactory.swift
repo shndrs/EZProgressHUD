@@ -12,7 +12,7 @@ public struct EZProgressHUD {
     
     private init() {}
     
-    ///A Factory method That returns a HSProgressProtocol to access show() and dismiss() functions
+    ///A Factory method That returns a EZProgressProtocol to access show() and dismiss() functions
     
     @discardableResult
     public static func set(progress:EZProgressOptions) -> EZProgress {
