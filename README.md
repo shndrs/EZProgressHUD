@@ -8,6 +8,20 @@
 # EZProgressHUD
 As we said, this is a very cool customizable and easy to use activity indicator for iOS and guess what!!?? Android Application(coming soon...) hope you guys enjoy it -[shndrs](https://github.com/shndrs) -[hnk](https://github.com/HaniehNikjoo) 😊😊
 
+How to use?
+=======
+if you wanna use the default EZProgressHUD just follow this👇🏻:
+```Swift
+let options = EZProgressOptions()
+let hud = EZProgressHUD.setProgress(with: options)        
+``` 
+and now you can show or dismiss it by :
+
+```Swift
+hud.show() // for show it
+hud.dismiss(completion: nil) // for dismiss it
+```
+
 Requirements
 =======
 
@@ -17,7 +31,6 @@ Requirements
 
 Installation
 =======
-
 
  <img src="https://raw.githubusercontent.com/CocoaPods/shared_resources/master/img/CocoaPods-Logo-Highlight.png" width="128px" height="32px" />
 
@@ -47,10 +60,8 @@ sahandraeisi1994@gmail.com, sahandraeisi@yahoo.com, [shndrs](https://linkedin.co
 
 License
 =======
-
 SwiftyTabBarTransition is available under the MIT license. See the LICENSE file for more info.
 
 Credit
 =======
-
 EZProgressHUD is brought to you in iOS Swift by [Sahand Raeisi - shndrs](https://github.com/shndrs) and in Android Java by [Hanieh Nikjoo - hnk](https://github.com/HaniehNikjoo)
