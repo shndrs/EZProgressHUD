@@ -60,13 +60,13 @@ extension HNK: EZProgressAnimation {
     
     public func setAnimation() {
         
-        firstShapeLayer.lineWidth = progress.strokeWidth
+        firstShapeLayer.lineWidth = options.strokeWidth
         firstShapeLayer.lineDashPattern = [5]
         
-        secondShapeLayer.lineWidth = progress.strokeWidth
+        secondShapeLayer.lineWidth = options.strokeWidth
         secondShapeLayer.lineDashPattern = [5]
         
-        thirdShapeLayer.lineWidth = progress.strokeWidth
+        thirdShapeLayer.lineWidth = options.strokeWidth
         thirdShapeLayer.lineDashPattern = [5]
         
         firstShapeLayer.strokeStart = 0.0

@@ -14,7 +14,7 @@ public enum ShapeLayerType {
 
 open class EZBaseView: UIView {
     
-    public var progress: EZProgressOptions
+    public var options: EZProgressOptions
     
     /// our first shape layer
     public private(set) lazy var firstShapeLayer: CAShapeLayer = {
@@ -35,11 +35,11 @@ open class EZBaseView: UIView {
     /// the title label
     public private(set) lazy var titleLabel: UILabel = {
         let lbl = UILabel()
-        lbl.text = progress.title
+        lbl.text = options.title
         lbl.textAlignment = .center
-        lbl.textColor = progress.titleTextColor
+        lbl.textColor = options.titleTextColor
         lbl.numberOfLines = 3
-        lbl.font = progress.font
+        lbl.font = options.font
         return lbl
     }()
     
@@ -47,14 +47,14 @@ open class EZBaseView: UIView {
     public private(set) lazy var transView: UIView = {
         let view = UIView()
         view.frame = UIScreen.main.bounds
-        view.backgroundColor = progress.transViewBackgroundColor.withAlphaComponent(0.95)
+        view.backgroundColor = options.transViewBackgroundColor.withAlphaComponent(0.95)
         view.isUserInteractionEnabled = false
         return view
     }()
     
     /// EZBaseView initializer that take a EZProgressOptions as it input
-    public init(progress: EZProgressOptions) {
-        self.progress = progress
+    public init(options: EZProgressOptions) {
+        self.options = options
         super.init(frame: .zero)
     }
     
@@ -68,21 +68,21 @@ open class EZBaseView: UIView {
         switch type {
             
         case .firstShapeLayer:
-            shapeLayer.strokeColor = progress.firstLayerStrokeColor.cgColor
+            shapeLayer.strokeColor = options.firstLayerStrokeColor.cgColor
         case .secondShapeLayer:
-            shapeLayer.strokeColor = progress.secondLayerStrokeColor.withAlphaComponent(0.42).cgColor
+            shapeLayer.strokeColor = options.secondLayerStrokeColor.withAlphaComponent(0.42).cgColor
         case .thirdShapeLayer:
-            shapeLayer.strokeColor = progress.thirdLayerStrokeColor.cgColor
+            shapeLayer.strokeColor = options.thirdLayerStrokeColor.cgColor
         }
         
         let circularTrackPath = UIBezierPath(arcCenter: .zero,
-                                             radius: progress.radius,
+                                             radius: options.radius,
                                              startAngle: -(.pi) , endAngle:2 * .pi,
                                              clockwise: true)
         
         shapeLayer.position = transView.center
         shapeLayer.path = circularTrackPath.cgPath
-        shapeLayer.lineWidth = progress.strokeWidth
+        shapeLayer.lineWidth = options.strokeWidth
         shapeLayer.fillColor = UIColor.clear.cgColor
         transView.layer.addSublayer(shapeLayer)
     }

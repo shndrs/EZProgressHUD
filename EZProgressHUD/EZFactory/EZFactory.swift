@@ -15,41 +15,41 @@ public struct EZProgressHUD {
     ///A Factory method That returns a EZProgressProtocol to access show() and dismiss() functions
     
     @discardableResult
-    public static func set(progress:EZProgressOptions) -> EZProgress {
+    public static func setProgress(with options:EZProgressOptions) -> EZProgress {
         
-        switch progress.animationOption {
+        switch options.animationOption {
             
         case .heartBeat:
             
-            return HeartBeat(progress: progress)
+            return HeartBeat(options: options)
             
         case .xRotation:
             
-            return XRotation(progress: progress)
+            return XRotation(options: options)
             
         case .lineLayer:
             
-            return LineLayer(progress: progress)
+            return LineLayer(options: options)
             
         case .lordOfTheRings:
             
-            return LordOfTheRings(progress: progress)
+            return LordOfTheRings(options: options)
             
         case .xyRotation:
             
-            return XYRotation(progress:progress)
+            return XYRotation(options: options)
             
         case .yRotation:
             
-            return YRotation(progress:progress)
+            return YRotation(options: options)
             
         case .antColony:
             
-            return AntColony(progress:progress)
+            return AntColony(options: options)
             
         case .hnk:
             
-            return HNK(progress:progress)
+            return HNK(options: options)
             
         }
     }
