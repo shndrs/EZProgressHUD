@@ -18,6 +18,9 @@ class ViewController: UIViewController {
         let options = EZProgressOptions()
         let hud = EZProgressHUD.setProgress(with: options)
         
+        hud.show()
+        hud.dismiss(completion: nil)
+        
         
         
     }

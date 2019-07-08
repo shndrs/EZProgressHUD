@@ -16,7 +16,7 @@ class EZProgressHUDTests: XCTestCase {
     override func tearDown() {}
 
     func hnkTest() {
-        let progress = EZProgressOptions { (options) in
+        let options = EZProgressOptions { (options) in
             options.radius = 115
             options.secondLayerStrokeColor = .green
             options.strokeWidth = 2
@@ -26,20 +26,20 @@ class EZProgressHUDTests: XCTestCase {
             options.animationOption = EZAnimationOptions.hnk
         }
         
-        XCTAssertNotNil(progress)
+        XCTAssertNotNil(options)
         
-        let hud = EZProgressHUD.set(progress: progress)
+        let hud = EZProgressHUD.setProgress(with: options)
         
         XCTAssertNotNil(hud)
     }
     
     func defaultHudTest() {
         
-        let progress = EZProgressOptions()
+        let options = EZProgressOptions()
         
-        XCTAssertNotNil(progress, "Not Nil")
+        XCTAssertNotNil(options, "Not Nil")
         
-        let hud = EZProgressHUD.set(progress: progress)
+        let hud = EZProgressHUD.setProgress(with: options)
         
         XCTAssertNotNil(hud)
     }
