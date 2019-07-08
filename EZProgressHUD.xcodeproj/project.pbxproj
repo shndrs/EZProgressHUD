@@ -15,6 +15,11 @@
 		F4EAFB5922D3292E00689062 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4EAFB5722D3292E00689062 /* Main.storyboard */; };
 		F4EAFB5B22D3293000689062 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4EAFB5A22D3293000689062 /* Assets.xcassets */; };
 		F4EAFB5E22D3293000689062 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4EAFB5C22D3293000689062 /* LaunchScreen.storyboard */; };
+		F4EAFB6522D32E8100689062 /* EZInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EAFB6422D32E8100689062 /* EZInterfaces.swift */; };
+		F4EAFB6822D32EDF00689062 /* EZProgressOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EAFB6722D32EDF00689062 /* EZProgressOptions.swift */; };
+		F4EAFB6B22D32F9F00689062 /* EZStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EAFB6A22D32F9F00689062 /* EZStrings.swift */; };
+		F4EAFB6E22D32FEE00689062 /* EZBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EAFB6D22D32FEE00689062 /* EZBaseView.swift */; };
+		F4EAFB7122D3301C00689062 /* EZAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EAFB7022D3301C00689062 /* EZAnimations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +46,11 @@
 		F4EAFB5A22D3293000689062 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4EAFB5D22D3293000689062 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4EAFB5F22D3293000689062 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4EAFB6422D32E8100689062 /* EZInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZInterfaces.swift; sourceTree = "<group>"; };
+		F4EAFB6722D32EDF00689062 /* EZProgressOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZProgressOptions.swift; sourceTree = "<group>"; };
+		F4EAFB6A22D32F9F00689062 /* EZStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZStrings.swift; sourceTree = "<group>"; };
+		F4EAFB6D22D32FEE00689062 /* EZBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZBaseView.swift; sourceTree = "<group>"; };
+		F4EAFB7022D3301C00689062 /* EZAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZAnimations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +102,11 @@
 		F4EAFB3522D31F2800689062 /* EZProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
+				F4EAFB6F22D32FFF00689062 /* EZAnimations */,
+				F4EAFB6C22D32FDF00689062 /* EZBaseView */,
+				F4EAFB6922D32F0500689062 /* EZOthers */,
+				F4EAFB6622D32EC000689062 /* EZProgressOptions */,
+				F4EAFB6322D32E6700689062 /* Interfaces */,
 				F4EAFB3622D31F2800689062 /* EZProgressHUD.h */,
 				F4EAFB3722D31F2800689062 /* Info.plist */,
 			);
@@ -118,6 +133,46 @@
 				F4EAFB5F22D3293000689062 /* Info.plist */,
 			);
 			path = EZProgressHUDExamples;
+			sourceTree = "<group>";
+		};
+		F4EAFB6322D32E6700689062 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				F4EAFB6422D32E8100689062 /* EZInterfaces.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		F4EAFB6622D32EC000689062 /* EZProgressOptions */ = {
+			isa = PBXGroup;
+			children = (
+				F4EAFB6722D32EDF00689062 /* EZProgressOptions.swift */,
+			);
+			path = EZProgressOptions;
+			sourceTree = "<group>";
+		};
+		F4EAFB6922D32F0500689062 /* EZOthers */ = {
+			isa = PBXGroup;
+			children = (
+				F4EAFB6A22D32F9F00689062 /* EZStrings.swift */,
+			);
+			path = EZOthers;
+			sourceTree = "<group>";
+		};
+		F4EAFB6C22D32FDF00689062 /* EZBaseView */ = {
+			isa = PBXGroup;
+			children = (
+				F4EAFB6D22D32FEE00689062 /* EZBaseView.swift */,
+			);
+			path = EZBaseView;
+			sourceTree = "<group>";
+		};
+		F4EAFB6F22D32FFF00689062 /* EZAnimations */ = {
+			isa = PBXGroup;
+			children = (
+				F4EAFB7022D3301C00689062 /* EZAnimations.swift */,
+			);
+			path = EZAnimations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +254,7 @@
 				TargetAttributes = {
 					F4EAFB3222D31F2800689062 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					F4EAFB3B22D31F2800689062 = {
 						CreatedOnToolsVersion = 10.1;
@@ -260,6 +316,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4EAFB6E22D32FEE00689062 /* EZBaseView.swift in Sources */,
+				F4EAFB6822D32EDF00689062 /* EZProgressOptions.swift in Sources */,
+				F4EAFB7122D3301C00689062 /* EZAnimations.swift in Sources */,
+				F4EAFB6522D32E8100689062 /* EZInterfaces.swift in Sources */,
+				F4EAFB6B22D32F9F00689062 /* EZStrings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +496,7 @@
 		F4EAFB4822D31F2800689062 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -452,6 +514,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = shndrs.EZProgressHUD;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -460,6 +523,7 @@
 		F4EAFB4922D31F2800689062 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -485,6 +549,7 @@
 		F4EAFB4B22D31F2800689062 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KRGCDU34JU;
 				INFOPLIST_FILE = EZProgressHUDTests/Info.plist;
@@ -503,6 +568,7 @@
 		F4EAFB4C22D31F2800689062 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KRGCDU34JU;
 				INFOPLIST_FILE = EZProgressHUDTests/Info.plist;
