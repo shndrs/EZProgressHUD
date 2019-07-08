@@ -49,3 +49,8 @@ License
 =======
 
 SwiftyTabBarTransition is available under the MIT license. See the LICENSE file for more info.
+
+Credit
+=======
+
+EZProgressHUD is brought to you in iOS Swift by [Sahand Raeisi - shndrs](https://github.com/shndrs) and in Android Java by [Hanieh Nikjoo - hnk](https://github.com/HaniehNikjoo)
