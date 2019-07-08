@@ -1,0 +1,19 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "194e0724ebc19b2622d02645e0274030fe10dcaf",
+  "iOS" : [
+    {
+      "name" : "EZProgressHUD",
+      "hash" : "dd3de2168e1522474c300b0d6b17f0296169c25577a62366fe70abefb84fb71e",
+      "swiftToolchainVersion" : "4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+    }
+  ]
+}
