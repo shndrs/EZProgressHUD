@@ -1,5 +1,7 @@
 ![build-status](https://travis-ci.org/shndrs/EZProgressHUD.svg?branch=master)
 ![swift-version](https://img.shields.io/badge/Swift-4.2-blueviolet.svg)
+![version](https://img.shields.io/cocoapods/v/EZProgressHUD.svg)
+![cocoapod](https://img.shields.io/badge/Cocoapods-compatible-4BC51D.svg)
 ![license](https://img.shields.io/github/license/shndrs/EZProgressHUD.svg)
 
 # EZProgressHUD
