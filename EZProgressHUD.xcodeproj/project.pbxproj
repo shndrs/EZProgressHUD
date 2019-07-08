@@ -25,6 +25,8 @@
 		F4EAFB7922D33BE000689062 /* LineLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EAFB7822D33BE000689062 /* LineLayer.swift */; };
 		F4EAFB7B22D33C3300689062 /* LordOfTheRings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EAFB7A22D33C3300689062 /* LordOfTheRings.swift */; };
 		F4EAFB7D22D33C4D00689062 /* XRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EAFB7C22D33C4D00689062 /* XRotation.swift */; };
+		F4EAFB7F22D33CA300689062 /* XYRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EAFB7E22D33CA300689062 /* XYRotation.swift */; };
+		F4EAFB8122D33CC100689062 /* YRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EAFB8022D33CC100689062 /* YRotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		F4EAFB7822D33BE000689062 /* LineLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineLayer.swift; sourceTree = "<group>"; };
 		F4EAFB7A22D33C3300689062 /* LordOfTheRings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LordOfTheRings.swift; sourceTree = "<group>"; };
 		F4EAFB7C22D33C4D00689062 /* XRotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XRotation.swift; sourceTree = "<group>"; };
+		F4EAFB7E22D33CA300689062 /* XYRotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYRotation.swift; sourceTree = "<group>"; };
+		F4EAFB8022D33CC100689062 /* YRotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YRotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +206,8 @@
 				F4EAFB7822D33BE000689062 /* LineLayer.swift */,
 				F4EAFB7A22D33C3300689062 /* LordOfTheRings.swift */,
 				F4EAFB7C22D33C4D00689062 /* XRotation.swift */,
+				F4EAFB7E22D33CA300689062 /* XYRotation.swift */,
+				F4EAFB8022D33CC100689062 /* YRotation.swift */,
 			);
 			path = EZProgresses;
 			sourceTree = "<group>";
@@ -347,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4EAFB7F22D33CA300689062 /* XYRotation.swift in Sources */,
 				F4EAFB6E22D32FEE00689062 /* EZBaseView.swift in Sources */,
 				F4EAFB7B22D33C3300689062 /* LordOfTheRings.swift in Sources */,
 				F4EAFB6822D32EDF00689062 /* EZProgressOptions.swift in Sources */,
@@ -357,6 +364,7 @@
 				F4EAFB7422D336F100689062 /* EZFactory.swift in Sources */,
 				F4EAFB7722D3378400689062 /* HeartBeat.swift in Sources */,
 				F4EAFB7922D33BE000689062 /* LineLayer.swift in Sources */,
+				F4EAFB8122D33CC100689062 /* YRotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
