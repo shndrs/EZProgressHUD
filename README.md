@@ -22,6 +22,48 @@ hud.show() // for show it
 hud.dismiss(completion: nil) // for dismiss it
 ```
 
+## Customize
+
+there is two way to do the customization
+
+### First way (Creating an empty instance of EZProgressOptions)
+
+```Swift
+
+let options = EZProgressOptions()
+
+options.radius = 120
+options.firstLayerStrokeColor = EZCustomColors.veryLightGray
+options.secondLayerStrokeColor = EZCustomColors.white
+options.thirdLayerStrokeColor = EZCustomColors.darkGray
+options.strokeWidth = 12
+options.font =  UIFont(name: "AvenirNext-Regular", size: 18)
+options.title = "ez presents"
+options.titleTextColor = UIColor.purple
+options.transViewBackgroundColor = UIColor.black
+options.animationOption = EZAnimationOptions.lordOfTheRings
+
+```
+
+### Second way (Using Closure)
+
+```Swift
+
+let options = EZProgressOptions { (option) in
+    option.radius = 115
+    option.firstLayerStrokeColor = UIColor(red: 10/255, green: 101/255, blue: 171/255, alpha: 1.0)
+    option.secondLayerStrokeColor = UIColor(red: 10/255, green: 101/255, blue: 171/255, alpha: 1.0)
+    option.thirdLayerStrokeColor = .gray
+    option.strokeWidth = 2
+    option.font = UIFont(name: "Papyrus", size: 18)
+    option.title = "ez presents"
+    option.titleTextColor = UIColor.purple
+    option.transViewBackgroundColor = UIColor.black
+    option.animationOption = EZAnimationOptions.hnk
+}
+
+```
+
 Requirements
 =======
 
