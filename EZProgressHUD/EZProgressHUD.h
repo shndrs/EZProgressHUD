@@ -2,7 +2,7 @@
 //  EZProgressHUD.h
 //  EZProgressHUD
 //
-//  Created by NP2 on 7/8/19.
+//  Created by shndrs on 7/8/19.
 //  Copyright © 2019 shndrs. All rights reserved.
 //
 
