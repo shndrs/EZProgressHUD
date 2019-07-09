@@ -143,4 +143,28 @@ final class ViewController: UIViewController {
             hud.dismiss(completion: nil)
         }
     }
+    
+    // MARK: - AntColony HUD
+    
+    @IBAction private func antColonyButtonPressed(_ sender: UIButton) {
+        
+        let options = EZProgressOptions { (option) in
+            option.radius = 120
+            option.secondLayerStrokeColor = UIColor(red: 85.0/255.0, green: 85.0/255.0, blue: 85.0/255.0, alpha: 1.0)
+            option.strokeWidth = 12
+            option.thirdLayerStrokeColor = .darkGray
+            option.firstLayerStrokeColor = .white
+            option.title = "shndrs presents"
+            option.animationOption = EZAnimationOptions.antColony
+        }
+        
+        let hud = EZProgressHUD.setProgress(with: options)
+        hud.show()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+            hud.dismiss(completion: nil)
+        }
+    }
+    
+    
 }
