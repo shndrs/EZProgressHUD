@@ -11,6 +11,8 @@ import EZProgressHUD
 
 final class ViewController: UIViewController {
     
+    // MARK: - HeartBeat HUD
+    
     @IBAction private func heartBeatButtonPressed(_ sender: UIButton) {
         
         let progress = EZProgressOptions { (options) in
@@ -31,6 +33,26 @@ final class ViewController: UIViewController {
         }
     }
     
+    // MARK: - LineLayer HUD
+    
+    @IBAction private func lineLayerButtonPressed(_ sender: UIButton) {
+        
+        let progress = EZProgressOptions { (options) in
+            options.radius = 120
+            options.secondLayerStrokeColor = UIColor(red: 255/255, green: 190/255, blue: 0/255, alpha: 1)
+            options.strokeWidth = 13
+            options.thirdLayerStrokeColor = UIColor(red: 255/255, green: 190/255, blue: 0/255, alpha: 1)
+            options.firstLayerStrokeColor = .black
+            options.title = "shndrs presents"
+            options.animationOption = EZAnimationOptions.lineLayer
+        }
+        
+        let hud = EZProgressHUD.set(progress: progress)
+        hud.show()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+            hud.dismiss(completion: nil)
+        }
     
     
 }
