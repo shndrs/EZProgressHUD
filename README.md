@@ -98,7 +98,10 @@ it in latest version, simply add the following line to your Podfile:
 ```ruby
 pod 'EZProgressHUD', '~> 1.4.0'
 ```
-
+and then on your terminal run 👇🏻:
+```bash
+pod install
+```
 <img src="https://raw.githubusercontent.com/Carthage/Carthage/master/Logo/PNG/colored.png" width="32px" height="32px" />
 
 
@@ -109,14 +112,17 @@ To get the latest version of library using Carthage, you can add following line 
 ```bash
 github "shndrs/EZProgressHUD" "1.4.0"
 ```
-
+and then on your terminal run 👇🏻:
+```bash
+carthage update
+```
 Author
 =======
 sahandraeisi1994@gmail.com, sahandraeisi@yahoo.com, [shndrs](https://linkedin.com/in/shndrs)
 
 License
 =======
-SwiftyTabBarTransition is available under the MIT license. See the LICENSE file for more info.
+EZProgressHUD is available under the MIT license. See the LICENSE file for more info.
 
 Credit
 =======
