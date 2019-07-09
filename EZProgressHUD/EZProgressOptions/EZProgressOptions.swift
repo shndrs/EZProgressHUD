@@ -28,10 +28,10 @@ public enum EZAnimationOptions {
     /// the color of main circle (by default is UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1)) it's red don't panic :D
     public var firstLayerStrokeColor: UIColor = UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1)
     
-    /// the color of mian pulsate layer that is transparent all the time (by default is UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1)) it's red don't panic :D
+    /// the color of second circle layer that is transparent all the time (by default is UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1)) it's red don't panic :D
     public var secondLayerStrokeColor: UIColor = UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1)
     
-    /// the color of inner pulsate layer (by default is .gray)
+    /// the color of third circle layer (by default is .gray)
     public var thirdLayerStrokeColor: UIColor = UIColor.gray
     
     /// title text (by default is Please Wait...)

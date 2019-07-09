@@ -9,22 +9,7 @@
 import UIKit
 import EZProgressHUD
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        let options = EZProgressOptions()
-        let hud = EZProgressHUD.setProgress(with: options)
-        
-        hud.show()
-        hud.dismiss(completion: nil)
-        
-        
-        
-    }
-
-
+final class ViewController: UIViewController {
+    
+    
 }
-

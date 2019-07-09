@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 public protocol EZProgressAnimation {
     func setAnimation() -> Void
     func setLayers() -> Void
