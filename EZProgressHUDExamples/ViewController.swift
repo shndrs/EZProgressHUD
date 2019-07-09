@@ -99,4 +99,26 @@ final class ViewController: UIViewController {
             hud.dismiss(completion: nil)
         }
     }
+    
+    // MARK: - YRotation HUD
+    
+    @IBAction private func yRotationButtonPressed(_ sender: UIButton) {
+        
+        let options = EZProgressOptions { (option) in
+            option.radius = 100
+            option.secondLayerStrokeColor = .brown
+            option.strokeWidth = 12
+            option.thirdLayerStrokeColor = .gray
+            option.firstLayerStrokeColor = .darkGray
+            option.title = "shndrs presents"
+            option.animationOption = EZAnimationOptions.yRotation
+        }
+        
+        let hud = EZProgressHUD.setProgress(with: options)
+        hud.show()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+            hud.dismiss(completion: nil)
+        }
+    }
 }
