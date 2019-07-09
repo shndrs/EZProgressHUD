@@ -96,7 +96,7 @@ it in latest version, simply add the following line to your Podfile:
 ### Swift 4.2
 
 ```ruby
-pod 'EZProgressHUD', '~> 1.4.0'
+pod 'EZProgressHUD', '~> 1.4.1'
 ```
 and then on your terminal run 👇🏻:
 ```bash
@@ -110,7 +110,7 @@ To get the latest version of library using Carthage, you can add following line 
 ### Swift 4.2
 
 ```bash
-github "shndrs/EZProgressHUD" "1.4.0"
+github "shndrs/EZProgressHUD" "1.4.1"
 ```
 and then on your terminal run 👇🏻:
 ```bash
