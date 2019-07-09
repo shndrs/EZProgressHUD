@@ -22,8 +22,8 @@ public enum EZAnimationOptions {
 
 @requires_stored_property_inits public class EZProgressOptions {
     
-    /// the width of stroke (by default is 17.0)
-    public var strokeWidth: CGFloat = 17.0
+    /// the width of stroke (by default is 12.0)
+    public var strokeWidth: CGFloat = 12.0
     
     /// the color of main circle (by default is UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1)) it's red don't panic :D
     public var firstLayerStrokeColor: UIColor = UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1)
@@ -46,8 +46,8 @@ public enum EZAnimationOptions {
     /// the background transparent view color (by default is black)
     public var transViewBackgroundColor: UIColor = UIColor.black
     
-    /// the radius of the circles (by default is 105.0)
-    public var radius: CGFloat = 105.0
+    /// the radius of the circles (by default is 115.0)
+    public var radius: CGFloat = 115.0
     
     /// choose diffrent kind of animations by changing this property (by default is EZAnimationOptions.heartBeat)
     public var animationOption: EZAnimationOptions = .heartBeat
