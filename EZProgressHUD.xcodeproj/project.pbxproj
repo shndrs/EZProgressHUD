@@ -103,6 +103,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F40EBCB122D4A71E00E24976 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F4EAFB5C22D3293000689062 /* LaunchScreen.storyboard */,
+				F4EAFB5722D3292E00689062 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F40EBCB222D4A73000E24976 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F4EAFB5522D3292E00689062 /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F40EBCB322D4A73C00E24976 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F4EAFB5322D3292E00689062 /* AppDelegate.swift */,
+				F4EAFB5A22D3293000689062 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		F4EAFB2922D31F2800689062 = {
 			isa = PBXGroup;
 			children = (
@@ -154,11 +180,9 @@
 		F4EAFB5222D3292E00689062 /* EZProgressHUDExamples */ = {
 			isa = PBXGroup;
 			children = (
-				F4EAFB5322D3292E00689062 /* AppDelegate.swift */,
-				F4EAFB5522D3292E00689062 /* ViewController.swift */,
-				F4EAFB5722D3292E00689062 /* Main.storyboard */,
-				F4EAFB5A22D3293000689062 /* Assets.xcassets */,
-				F4EAFB5C22D3293000689062 /* LaunchScreen.storyboard */,
+				F40EBCB322D4A73C00E24976 /* Resources */,
+				F40EBCB222D4A73000E24976 /* ViewController */,
+				F40EBCB122D4A71E00E24976 /* Storyboards */,
 				F4EAFB5F22D3293000689062 /* Info.plist */,
 			);
 			path = EZProgressHUDExamples;
@@ -570,6 +594,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = EZProgressHUD/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -597,6 +622,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = EZProgressHUD/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -655,6 +681,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KRGCDU34JU;
 				INFOPLIST_FILE = EZProgressHUDExamples/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -673,6 +700,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KRGCDU34JU;
 				INFOPLIST_FILE = EZProgressHUDExamples/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

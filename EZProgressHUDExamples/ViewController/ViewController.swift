@@ -173,7 +173,7 @@ final class ViewController: UIViewController {
         let options = EZProgressOptions { (option) in
             option.radius = 115
             option.secondLayerStrokeColor = UIColor(red: 10/255, green: 101/255, blue: 171/255, alpha: 1.0)
-            option.strokeWidth = 2
+            option.strokeWidth = 3
             option.thirdLayerStrokeColor = .gray
             option.firstLayerStrokeColor = UIColor(red: 10/255, green: 101/255, blue: 171/255, alpha: 1.0)
             option.title = "shndrs presents"
