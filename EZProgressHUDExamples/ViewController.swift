@@ -121,4 +121,26 @@ final class ViewController: UIViewController {
             hud.dismiss(completion: nil)
         }
     }
+    
+    // MARK: - XYRotation HUD
+    
+    @IBAction private func xyRotationButtonPressed(_ sender: UIButton) {
+        
+        let options = EZProgressOptions { (option) in
+            option.radius = 115
+            option.secondLayerStrokeColor = UIColor(red: 0.0/255.0, green: 205.0/255.0, blue: 60.0/255.0, alpha: 1.0)
+            option.strokeWidth = 12
+            option.thirdLayerStrokeColor = UIColor(red: 0.0/255.0, green: 145.0/255.0, blue: 60.0/255.0, alpha: 1.0)
+            option.firstLayerStrokeColor = UIColor(red: 0.0/255.0, green: 145.0/255.0, blue: 60.0/255.0, alpha: 1.0)
+            option.title = "shndrs presents"
+            option.animationOption = EZAnimationOptions.xyRotation
+        }
+        
+        let hud = EZProgressHUD.setProgress(with: options)
+        hud.show()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+            hud.dismiss(completion: nil)
+        }
+    }
 }
