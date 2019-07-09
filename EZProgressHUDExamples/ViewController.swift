@@ -166,5 +166,25 @@ final class ViewController: UIViewController {
         }
     }
     
+    //MARK: - HNK HUD
     
+    @IBAction private func hnkButtonPressed(_ sender: UIButton) {
+        
+        let options = EZProgressOptions { (option) in
+            option.radius = 115
+            option.secondLayerStrokeColor = UIColor(red: 10/255, green: 101/255, blue: 171/255, alpha: 1.0)
+            option.strokeWidth = 2
+            option.thirdLayerStrokeColor = .gray
+            option.firstLayerStrokeColor = UIColor(red: 10/255, green: 101/255, blue: 171/255, alpha: 1.0)
+            option.title = "shndrs presents"
+            option.animationOption = EZAnimationOptions.hnk
+        }
+        
+        let hud = EZProgressHUD.setProgress(with: options)
+        hud.show()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+            hud.dismiss(completion: nil)
+        }
+    }
 }
