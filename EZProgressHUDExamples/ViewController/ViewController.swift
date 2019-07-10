@@ -29,7 +29,7 @@ final class ViewController: UIViewController {
         
         hud.show()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
             hud.dismiss(completion: nil)
         }
     }
@@ -51,7 +51,7 @@ final class ViewController: UIViewController {
         let hud = EZProgressHUD.setProgress(with: options)
         hud.show()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
             hud.dismiss(completion: nil)
         }
     }
@@ -73,7 +73,7 @@ final class ViewController: UIViewController {
         let hud = EZProgressHUD.setProgress(with: options)
         hud.show()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
             hud.dismiss(completion: nil)
         }
     }
@@ -83,7 +83,7 @@ final class ViewController: UIViewController {
     @IBAction private func xRotationButtonPressed(_ sender: UIButton) {
         
         let options = EZProgressOptions { (option) in
-            option.radius = 100
+            option.radius = 115
             option.secondLayerStrokeColor = .brown
             option.strokeWidth = 12
             option.thirdLayerStrokeColor = .gray
@@ -95,7 +95,7 @@ final class ViewController: UIViewController {
         let hud = EZProgressHUD.setProgress(with: options)
         hud.show()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
             hud.dismiss(completion: nil)
         }
     }
@@ -105,7 +105,7 @@ final class ViewController: UIViewController {
     @IBAction private func yRotationButtonPressed(_ sender: UIButton) {
         
         let options = EZProgressOptions { (option) in
-            option.radius = 100
+            option.radius = 115
             option.secondLayerStrokeColor = .brown
             option.strokeWidth = 12
             option.thirdLayerStrokeColor = .gray
@@ -117,7 +117,7 @@ final class ViewController: UIViewController {
         let hud = EZProgressHUD.setProgress(with: options)
         hud.show()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
             hud.dismiss(completion: nil)
         }
     }
@@ -139,7 +139,7 @@ final class ViewController: UIViewController {
         let hud = EZProgressHUD.setProgress(with: options)
         hud.show()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
             hud.dismiss(completion: nil)
         }
     }
@@ -161,7 +161,7 @@ final class ViewController: UIViewController {
         let hud = EZProgressHUD.setProgress(with: options)
         hud.show()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
             hud.dismiss(completion: nil)
         }
     }
@@ -183,7 +183,7 @@ final class ViewController: UIViewController {
         let hud = EZProgressHUD.setProgress(with: options)
         hud.show()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
             hud.dismiss(completion: nil)
         }
     }
