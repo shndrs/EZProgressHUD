@@ -6,7 +6,7 @@
 ![license](https://img.shields.io/github/license/shndrs/EZProgressHUD.svg)
 
 # EZProgressHUD
-As we said, this is a very cool customizable and easy to use activity indicator for iOS and guess what!!?? Android Application(coming soon...) hope you guys enjoy it -[shndrs](https://github.com/shndrs) -[hnk](https://github.com/HaniehNikjoo) 😊😊
+As we said in short description, this is a very cool customizable and easy to use activity indicator for iOS and guess what!!?? Android Application(coming soon...) hope you guys enjoy it 😊😊
 
 How to use?
 =======
@@ -90,7 +90,7 @@ Installation
 
  <img src="https://raw.githubusercontent.com/CocoaPods/shared_resources/master/img/CocoaPods-Logo-Highlight.png" width="128px" height="32px" />
 
-SwiftyTabBarTransition is available through [CocoaPods](https://cocoapods.org/pods/SwiftyTabBarTransition). To install
+SwiftyTabBarTransition is available through [CocoaPods](https://cocoapods.org/pods/EZProgressHUD). To install
 it in latest version, simply add the following line to your Podfile:
 
 ### Swift 4.2
@@ -105,7 +105,7 @@ pod install
 <img src="https://raw.githubusercontent.com/Carthage/Carthage/master/Logo/PNG/colored.png" width="32px" height="32px" />
 
 
-To get the latest version of library using Carthage, you can add following line to your Cartfile.
+To get the latest version of library using [Carthage](https://github.com/Carthage/Carthage), you can add following line to your Cartfile.
 
 ### Swift 4.2
 
