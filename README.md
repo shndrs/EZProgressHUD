@@ -5,20 +5,16 @@
 ![build-status](https://travis-ci.org/shndrs/EZProgressHUD.svg?branch=master)
 ![swift-version](https://img.shields.io/badge/Swift-4.2-blueviolet.svg)
 ![version](https://img.shields.io/cocoapods/v/EZProgressHUD.svg)
-![cocoapod](https://img.shields.io/badge/Cocoapods-compatible-4BC51D.svg)
+![cocoapods](https://img.shields.io/badge/CocoaPods-compatible-4BC51D.svg)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 ![license](https://img.shields.io/github/license/shndrs/EZProgressHUD.svg)
 
 As we said in short description, this is a very cool customizable and easy to use activity indicator for iOS and guess what!!?? Android Application(coming soon...) hope you guys enjoy it 😊😊
 
-![LineLayer-C](https://user-images.githubusercontent.com/34839080/60941651-1dabdb00-a2f5-11e9-8522-dee10b79b367.gif)
-![LordOfTheRings-C](https://user-images.githubusercontent.com/34839080/60941652-1e447180-a2f5-11e9-9010-20ef3d993f78.gif)
-![XRotation-C](https://user-images.githubusercontent.com/34839080/60941654-1e447180-a2f5-11e9-8c9d-194d068d0742.gif)
-![YRotation-C](https://user-images.githubusercontent.com/34839080/60941655-1e447180-a2f5-11e9-9945-b68bc371c82a.gif)
-![XYRotation-C](https://user-images.githubusercontent.com/34839080/60941656-1edd0800-a2f5-11e9-81b9-e14b5a7ba80d.gif)
-![AntColony-C](https://user-images.githubusercontent.com/34839080/60941657-1edd0800-a2f5-11e9-922e-b151fa927c45.gif)
-![HNK-C](https://user-images.githubusercontent.com/34839080/60941658-1edd0800-a2f5-11e9-8b22-6c0c8379db26.gif)
-![HeartBeat-C](https://user-images.githubusercontent.com/34839080/60941659-1edd0800-a2f5-11e9-8bfa-bc24cff40a6c.gif)
+![AntColony-C](https://user-images.githubusercontent.com/34839080/60947619-34a6f900-a306-11e9-84d3-88327e42ac80.gif)
+![HNK-C](https://user-images.githubusercontent.com/34839080/60947609-32dd3580-a306-11e9-939d-0489651cbbed.gif)
+![XYRotation-C](https://user-images.githubusercontent.com/34839080/60947617-340e6280-a306-11e9-98fe-931e7a6884e1.gif)
+![LineLayer-C](https://user-images.githubusercontent.com/34839080/60947616-340e6280-a306-11e9-9400-bf032e2c7931.gif)
 
 How to use?
 =======
@@ -37,9 +33,10 @@ hud.show() // for show it
 hud.dismiss(completion: nil) // for dismiss it
 ```
 
-## Customization
+Customization
+=======
 
-There is two way to do the customization
+There is two way to do the customization👇🏻:
 
 ### First Way: Creating an empty instance of EZProgressOptions
 
@@ -59,7 +56,6 @@ options.transViewBackgroundColor = .black                       // by default is
 options.animationOption = EZAnimationOptions.lordOfTheRings     // by default is EZAnimationOptions.heartBeat
 
 ```
-
 ### Second Way: Using Closure
 
 ```Swift
@@ -80,18 +76,21 @@ let options = EZProgressOptions { (option) in
 
 ```
 
-In `EZProgressHUD` we brought to you 8 diffrent kind of indicators which you can choose them like this
+Indicator Animation Options
+=======
 
-| animationOption  | 
-| ------------- |     
-| EZAnimationOptions.heartBeat   |
-| EZAnimationOptions.xRotation  |
-| EZAnimationOptions.yRotation  |
-| EZAnimationOptions.lineLayer  |
-| EZAnimationOptions.lordOfTheRings  |
-| EZAnimationOptions.xyRotation  |
-| EZAnimationOptions.antColony  |
-| EZAnimationOptions.hnk  |
+In `EZProgressHUD` we brought to you 8 diffrent kind of indicators:
+
+| animationOption  | Example |
+| ------------- | ------------- |
+| EZAnimationOptions.hnk  | ![HNK-C](https://user-images.githubusercontent.com/34839080/60947609-32dd3580-a306-11e9-939d-0489651cbbed.gif) |
+| EZAnimationOptions.heartBeat   | ![HeartBeat-C](https://user-images.githubusercontent.com/34839080/60947612-3375cc00-a306-11e9-9bb7-b36e6987c68d.gif) |
+| EZAnimationOptions.antColony  | ![AntColony-C](https://user-images.githubusercontent.com/34839080/60947619-34a6f900-a306-11e9-84d3-88327e42ac80.gif) |
+| EZAnimationOptions.lineLayer  | ![LineLayer-C](https://user-images.githubusercontent.com/34839080/60947616-340e6280-a306-11e9-9400-bf032e2c7931.gif) |
+| EZAnimationOptions.xyRotation  | ![XYRotation-C](https://user-images.githubusercontent.com/34839080/60947617-340e6280-a306-11e9-98fe-931e7a6884e1.gif) |
+| EZAnimationOptions.lordOfTheRings  | ![LordOfTheRings-C](https://user-images.githubusercontent.com/34839080/60947613-3375cc00-a306-11e9-9409-445e9972fdb2.gif) |
+| EZAnimationOptions.yRotation  | ![YRotation-C](https://user-images.githubusercontent.com/34839080/60947614-340e6280-a306-11e9-908d-3a5cfdbc2b7f.gif) |
+| EZAnimationOptions.xRotation  | ![XRotation-C](https://user-images.githubusercontent.com/34839080/60947618-34a6f900-a306-11e9-993b-5b7112f16a9f.gif) |
 
 Requirements
 =======
