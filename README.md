@@ -8,6 +8,15 @@
 # EZProgressHUD
 As we said in short description, this is a very cool customizable and easy to use activity indicator for iOS and guess what!!?? Android Application(coming soon...) hope you guys enjoy it 😊😊
 
+![LineLayer-C](https://user-images.githubusercontent.com/34839080/60941651-1dabdb00-a2f5-11e9-8522-dee10b79b367.gif)
+![LordOfTheRings-C](https://user-images.githubusercontent.com/34839080/60941652-1e447180-a2f5-11e9-9010-20ef3d993f78.gif)
+![XRotation-C](https://user-images.githubusercontent.com/34839080/60941654-1e447180-a2f5-11e9-8c9d-194d068d0742.gif)
+![YRotation-C](https://user-images.githubusercontent.com/34839080/60941655-1e447180-a2f5-11e9-9945-b68bc371c82a.gif)
+![XYRotation-C](https://user-images.githubusercontent.com/34839080/60941656-1edd0800-a2f5-11e9-81b9-e14b5a7ba80d.gif)
+![AntColony-C](https://user-images.githubusercontent.com/34839080/60941657-1edd0800-a2f5-11e9-922e-b151fa927c45.gif)
+![HNK-C](https://user-images.githubusercontent.com/34839080/60941658-1edd0800-a2f5-11e9-8b22-6c0c8379db26.gif)
+![HeartBeat-C](https://user-images.githubusercontent.com/34839080/60941659-1edd0800-a2f5-11e9-8bfa-bc24cff40a6c.gif)
+
 How to use?
 =======
 if you wanna use the default EZProgressHUD just follow this👇🏻:
