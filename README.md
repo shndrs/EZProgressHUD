@@ -8,6 +8,7 @@
 ![license](https://img.shields.io/cocoapods/l/EZProgressHUD.svg)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-000000.svg?style=flat)](https://github.com/Carthage/Carthage)
 ![cocoapods](https://img.shields.io/badge/CocoaPods-compatible-000000.svg)
+
 As we said in short description, this is a very cool customizable and easy to use activity indicator for iOS and guess what!!?? Android Application(coming soon...) hope you guys enjoy it 😊😊
 
 ![AntColony-C](https://user-images.githubusercontent.com/34839080/60947619-34a6f900-a306-11e9-84d3-88327e42ac80.gif)
