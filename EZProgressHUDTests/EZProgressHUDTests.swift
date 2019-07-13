@@ -11,9 +11,7 @@ import XCTest
 
 class EZProgressHUDTests: XCTestCase {
 
-    override func setUp() {
-        hnkTest()
-    }
+    override func setUp() {}
 
     override func tearDown() {}
 
@@ -64,6 +62,13 @@ class EZProgressHUDTests: XCTestCase {
         let hud = EZProgressHUD.setProgress(with: options)
         
         XCTAssertNotNil(hud)
+        
+        let opts = EZProgressOptions { (_) in }
+        XCTAssertNotNil(opts)
+        
+        let hd = EZProgressHUD.setProgress(with: opts)
+        
+        XCTAssertNotNil(hd)
     }
 
     func testPerformanceExample() {
