@@ -11,7 +11,9 @@ import XCTest
 
 class EZProgressHUDTests: XCTestCase {
 
-    override func setUp() {}
+    override func setUp() {
+        hnkTest()
+    }
 
     override func tearDown() {}
 
@@ -25,6 +27,26 @@ class EZProgressHUDTests: XCTestCase {
             options.title = "shndrs presents"
             options.animationOption = EZAnimationOptions.hnk
         }
+        
+        XCTAssertNotNil(options)
+        
+        let hud = EZProgressHUD.setProgress(with: options)
+        
+        XCTAssertNotNil(hud)
+    }
+    
+    func lordOfTheRingTest() {
+        let options = EZProgressOptions()
+        options.radius = 120
+        options.firstLayerStrokeColor = .lightGray
+        options.secondLayerStrokeColor = .white
+        options.thirdLayerStrokeColor = .darkGray
+        options.strokeWidth = 12
+        options.font = UIFont(name: "AvenirNext-Regular", size: 18)!
+        options.title = "EZProgressHUD"
+        options.titleTextColor = .white
+        options.transViewBackgroundColor = .black
+        options.animationOption = EZAnimationOptions.lordOfTheRings
         
         XCTAssertNotNil(options)
         
@@ -49,6 +71,7 @@ class EZProgressHUDTests: XCTestCase {
         self.measure {
             hnkTest()
             defaultHudTest()
+            lordOfTheRingTest()
         }
     }
 
