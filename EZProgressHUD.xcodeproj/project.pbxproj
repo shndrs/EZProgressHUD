@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F4A9A70422D9BC5A006467C9 /* EZProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4EAFB3322D31F2800689062 /* EZProgressHUD.framework */; };
 		F4EAFB3D22D31F2800689062 /* EZProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4EAFB3322D31F2800689062 /* EZProgressHUD.framework */; };
 		F4EAFB4222D31F2800689062 /* EZProgressHUDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EAFB4122D31F2800689062 /* EZProgressHUDTests.swift */; };
 		F4EAFB4422D31F2800689062 /* EZProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = F4EAFB3622D31F2800689062 /* EZProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -97,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4A9A70422D9BC5A006467C9 /* EZProgressHUD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +131,13 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		F4A9A70322D9BC5A006467C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F4EAFB2922D31F2800689062 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +148,7 @@
 				F4EAFB4022D31F2800689062 /* EZProgressHUDTests */,
 				F4EAFB5222D3292E00689062 /* EZProgressHUDExamples */,
 				F4EAFB3422D31F2800689062 /* Products */,
+				F4A9A70322D9BC5A006467C9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -518,6 +528,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -575,6 +586,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -604,7 +616,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -631,7 +643,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = shndrs.EZProgressHUD;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -650,7 +662,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = shndrs.EZProgressHUDTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -669,7 +681,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = shndrs.EZProgressHUDTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -688,7 +700,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = shndrs.EZProgressHUDExamples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -707,7 +719,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = shndrs.EZProgressHUDExamples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
