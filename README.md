@@ -1,7 +1,7 @@
 ![EZProgressHUD-logo](https://user-images.githubusercontent.com/34839080/60944448-19d08680-a2fe-11e9-8381-9d73a56f69ae.png)
 
 # EZProgressHUD
-![build-status](https://travis-ci.org/shndrs/EZProgressHUD.svg?branch=master)
+
 ![swift-version](https://img.shields.io/badge/Swift-5-blueviolet.svg)
 ![version](https://img.shields.io/cocoapods/v/EZProgressHUD.svg)
 ![platform](https://img.shields.io/cocoapods/p/EZProgressHUD.svg)
