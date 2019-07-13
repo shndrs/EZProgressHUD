@@ -2,6 +2,7 @@
 
 # EZProgressHUD
 
+![build-status](https://travis-ci.org/shndrs/EZProgressHUD.svg?branch=master)
 ![swift-version](https://img.shields.io/badge/Swift-5-blueviolet.svg)
 ![version](https://img.shields.io/cocoapods/v/EZProgressHUD.svg)
 ![platform](https://img.shields.io/cocoapods/p/EZProgressHUD.svg)
@@ -96,8 +97,7 @@ Requirements
 =======
 
 <p>iOS 9.3+</p>
-<p>Xcode 10.1</p>  
-<p>Swift 4.2</p>
+<p>Swift 4.2 / Swift 5</p>
 
 Installation
 =======
@@ -112,6 +112,11 @@ it in latest version, simply add the following line to your Podfile:
 ```ruby
 pod 'EZProgressHUD', '~> 1.4.3'
 ```
+### Swift 5
+
+```ruby
+pod `EZProgressHUD`, `~> 1.5.1`
+```
 And then on your terminal run 👇🏻:
 ```bash
 pod install
@@ -125,6 +130,10 @@ To get the latest version of library using [Carthage](https://github.com/Carthag
 
 ```bash
 github "shndrs/EZProgressHUD" "1.4.3"
+```
+### Swift 5
+```bash
+github "shndrs/EZProgressHUD" "1.5.1"
 ```
 And then on your terminal run 👇🏻:
 ```bash
