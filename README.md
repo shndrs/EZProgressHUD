@@ -1,13 +1,13 @@
 ![EZProgressHUD-logo](https://user-images.githubusercontent.com/34839080/60944448-19d08680-a2fe-11e9-8381-9d73a56f69ae.png)
 
 # EZProgressHUD
-
 ![build-status](https://travis-ci.org/shndrs/EZProgressHUD.svg?branch=master)
 ![swift-version](https://img.shields.io/badge/Swift-4.2-blueviolet.svg)
 ![version](https://img.shields.io/cocoapods/v/EZProgressHUD.svg)
-![cocoapods](https://img.shields.io/badge/CocoaPods-compatible-4BC51D.svg)
-[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-![license](https://img.shields.io/github/license/shndrs/EZProgressHUD.svg)
+![platform](https://img.shields.io/cocoapods/p/EZProgressHUD.svg)
+![license](https://img.shields.io/cocoapods/l/EZProgressHUD.svg)
+[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-000000.svg?style=flat)](https://github.com/Carthage/Carthage)
+![cocoapods](https://img.shields.io/badge/CocoaPods-compatible-000000.svg)
 
 As we said in short description, this is a very cool customizable and easy to use activity indicator for iOS and guess what!!?? Android Application(coming soon...) hope you guys enjoy it 😊😊
 
@@ -110,7 +110,7 @@ it in latest version, simply add the following line to your Podfile:
 ### Swift 4.2
 
 ```ruby
-pod 'EZProgressHUD', '~> 1.4.1'
+pod 'EZProgressHUD', '~> 1.4.2'
 ```
 And then on your terminal run 👇🏻:
 ```bash
@@ -124,7 +124,7 @@ To get the latest version of library using [Carthage](https://github.com/Carthag
 ### Swift 4.2
 
 ```bash
-github "shndrs/EZProgressHUD" "1.4.1"
+github "shndrs/EZProgressHUD" "1.4.2"
 ```
 And then on your terminal run 👇🏻:
 ```bash
