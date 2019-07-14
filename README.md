@@ -97,7 +97,7 @@ Requirements
 =======
 
 <p>iOS 9.3+</p>
-<p>Swift 4.2 / Swift 5</p>
+<p>Swift 4.2 or later</p>
 
 Installation
 =======
