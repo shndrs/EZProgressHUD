@@ -8,37 +8,7 @@
 
 import UIKit
 
-final public class LineLayer: EZBaseView {}
-
-// MARK: EZProgressProtocol Impelementation
-
-extension LineLayer: EZProgress {
-    
-    public func show() {
-        setLayers()
-        showBlock()
-    }
-    
-    public func dismiss(completion: (() -> Void)?) {
-        dismissBlock(completion: completion)
-    }
-}
-
-// MARK: Set Animation And Layers
-
-extension LineLayer: EZProgressAnimation {
-    
-    public func setLayers() {
-        transView.alpha = 0
-        titleLabel.frame = CGRect(x: 0, y: 0, width: 140, height: 70)
-        titleLabel.center = transView.center
-        transView.addSubview(titleLabel)
-        layerGenerator(shapeLayer: secondShapeLayer, type: .secondShapeLayer)
-        layerGenerator(shapeLayer: thirdShapeLayer, type: .thirdShapeLayer)
-        layerGenerator(shapeLayer: firstShapeLayer, type: .firstShapeLayer)
-        setAnimation()
-    }
-    
+final public class LineLayer: EZBaseProgresses {
     fileprivate func setProperties() {
         firstShapeLayer.lineWidth = (options.strokeWidth / 4) + 1
         firstShapeLayer.lineDashPattern = [5]
@@ -46,7 +16,7 @@ extension LineLayer: EZProgressAnimation {
         firstShapeLayer.strokeEnd = 0.0
     }
     
-    public func setAnimation() {
+    public override func setAnimation() {
         setProperties()
         let lineDashArgs = LineDashPhaseArguments(byValue: 158.0,
                                                   autoreverse: true, duration: 3.75,
@@ -60,7 +30,6 @@ extension LineLayer: EZProgressAnimation {
             .lineWidth(toValue: (options.strokeWidth - 1.0), duration: 0.3)
         let opacityAnimation = EZAnimations.opacity()
         let strokeEndAnimation = EZAnimations.strokeEndAnimation(duration: 2)
-        
         secondShapeLayer.add(scaleTransformAnimation, forKey: EZStrings.hsKey0.rawValue)
         thirdShapeLayer.add(thirdLineWidthAnimation, forKey: EZStrings.hsKey1.rawValue)
         titleLabel.layer.add(opacityAnimation, forKey: EZStrings.hsKey2.rawValue)
@@ -69,4 +38,3 @@ extension LineLayer: EZProgressAnimation {
         firstShapeLayer.add(strokeEndAnimation, forKey: EZStrings.hsKey5.rawValue)
     }
 }
-

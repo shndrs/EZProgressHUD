@@ -254,6 +254,7 @@
 		F4EAFB7522D3373A00689062 /* EZProgresses */ = {
 			isa = PBXGroup;
 			children = (
+				F485D06022DDDD8A00EEFED9 /* EZBaseProgresses.swift */,
 				F4EAFB7622D3378400689062 /* HeartBeat.swift */,
 				F4EAFB7822D33BE000689062 /* LineLayer.swift */,
 				F4EAFB7A22D33C3300689062 /* LordOfTheRings.swift */,
@@ -262,7 +263,6 @@
 				F4EAFB8022D33CC100689062 /* YRotation.swift */,
 				F4EAFB8222D33D1900689062 /* AntColony.swift */,
 				F4EAFB8422D33D3400689062 /* HNK.swift */,
-				F485D06022DDDD8A00EEFED9 /* EZBaseProgresses.swift */,
 			);
 			path = EZProgresses;
 			sourceTree = "<group>";

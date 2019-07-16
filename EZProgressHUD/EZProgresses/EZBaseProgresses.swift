@@ -2,7 +2,7 @@
 //  EZBaseProgresses.swift
 //  EZProgressHUD
 //
-//  Created by NP2 on 7/16/19.
+//  Created by shndrs on 7/16/19.
 //  Copyright © 2019 shndrs. All rights reserved.
 //
 
