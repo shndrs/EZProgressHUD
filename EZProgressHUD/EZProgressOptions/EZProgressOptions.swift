@@ -25,10 +25,10 @@ public enum EZAnimationOptions {
     /// the stroke width of circles (by default is 12.0)
     public var strokeWidth: CGFloat = 12.0
     
-    /// the color of main circle (by default is UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1)) it's red don't panic :D
+    /// the color of main circle (default is red)
     public var firstLayerStrokeColor: UIColor = UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1)
     
-    /// the color of second circle layer that is transparent all the time (by default is UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1)) it's red don't panic :D
+    /// the color of second circle layer which is transparent (default is red)
     public var secondLayerStrokeColor: UIColor = UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1)
     
     /// the color of third circle layer (by default is .gray)
@@ -37,7 +37,7 @@ public enum EZAnimationOptions {
     /// title text (by default is Please Wait...)
     public var title: String = EZStrings.pleaseWait.rawValue
     
-    /// font of title text (by default is Papyrus size 18) AKA Papyrus is not lame ;) :D
+    /// font of title text (by default is Papyrus size 18)
     public var font: UIFont = UIFont(name: EZStrings.fontName.rawValue, size: 18)!
     
     /// color of title text (by default is white)
@@ -49,11 +49,11 @@ public enum EZAnimationOptions {
     /// the radius of the circles (by default is 115.0)
     public var radius: CGFloat = 115.0
     
-    /// choose diffrent kind of animations by changing this property (by default is EZAnimationOptions.heartBeat)
+    /// choose diffrent kind of animations by changing this property
+    /// (by default is EZAnimationOptions.heartBeat)
     public var animationOption: EZAnimationOptions = .heartBeat
     
-    
-    public typealias BuilderClosure = (EZProgressOptions) -> ()
+    public typealias BuilderClosure = (EZProgressOptions) -> Void
     
     /// use this initializer for default setup
     public required init() {}

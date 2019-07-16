@@ -58,14 +58,22 @@ extension HeartBeat: EZProgressAnimation {
     
     public func setAnimation() {
         
-        let transformAnimation = EZAnimations.transform(toValue: 1.07, duration: 0.8, option: .easeOut)
-        let transformAnimationInnerPulsate = EZAnimations.transform(toValue: 0.95, duration: 1.6, option: .easeOut)
+        let transformAnimation = EZAnimations.transform(toValue: 1.07,
+                                                        duration: 0.8,
+                                                        option: .easeOut)
+        let transformAnimationInnerPulsate = EZAnimations.transform(toValue: 0.95,
+                                                                    duration: 1.6,
+                                                                    option: .easeOut)
         let opacityAnimation = EZAnimations.opacity()
         let transformXScaleAnimation = EZAnimations.transformX()
         
-        secondShapeLayer.add(transformAnimation, forKey: EZStrings.hsKey0.rawValue)
-        thirdShapeLayer.add(transformAnimationInnerPulsate, forKey: EZStrings.hsKey1.rawValue)
-        titleLabel.layer.add(opacityAnimation, forKey: EZStrings.hsKey2.rawValue)
-        titleLabel.layer.add(transformXScaleAnimation, forKey: EZStrings.hsKey3.rawValue)
+        secondShapeLayer.add(transformAnimation,
+                             forKey: EZStrings.hsKey0.rawValue)
+        thirdShapeLayer.add(transformAnimationInnerPulsate,
+                            forKey: EZStrings.hsKey1.rawValue)
+        titleLabel.layer.add(opacityAnimation,
+                             forKey: EZStrings.hsKey2.rawValue)
+        titleLabel.layer.add(transformXScaleAnimation,
+                             forKey: EZStrings.hsKey3.rawValue)
     }
 }

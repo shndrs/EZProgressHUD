@@ -13,15 +13,15 @@ public class EZAnimations {
     private init() {}
     
     @discardableResult
-    public static func transform(fromValue:Any = 1, toValue: Any, duration: CFTimeInterval, option:CAMediaTimingFunctionName) -> CABasicAnimation {
+    public static func transform(fromValue:Any = 1,
+                                 toValue: Any, duration: CFTimeInterval,
+                                 option:CAMediaTimingFunctionName) -> CABasicAnimation {
         
         let transformScaleAnimation = CABasicAnimation(keyPath: EZStrings.transformScale.rawValue)
-        
         transformScaleAnimation.toValue = toValue
         transformScaleAnimation.duration = duration
         transformScaleAnimation.timingFunction = CAMediaTimingFunction(name: option)
         setCommonAnimationProperties(animation: transformScaleAnimation)
-        
         return transformScaleAnimation
     }
     
@@ -29,13 +29,11 @@ public class EZAnimations {
     public static func transformX() -> CABasicAnimation {
         
         let transformXScaleAnimation = CABasicAnimation(keyPath: EZStrings.transformScaleX.rawValue)
-        
         transformXScaleAnimation.fromValue = 1
         transformXScaleAnimation.toValue = 1.02
         transformXScaleAnimation.duration = 1.0
-        transformXScaleAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        transformXScaleAnimation.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
         setCommonAnimationProperties(animation: transformXScaleAnimation)
-        
         return transformXScaleAnimation
     }
     
@@ -43,13 +41,11 @@ public class EZAnimations {
     public static func rotationX(duration: CFTimeInterval) -> CABasicAnimation {
         
         let rotationXAnimation = CABasicAnimation(keyPath: EZStrings.transformRotationX.rawValue)
-        
         rotationXAnimation.fromValue = 0
         rotationXAnimation.toValue = CGFloat.pi * 2
         rotationXAnimation.duration = duration
         rotationXAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
         setCommonAnimationProperties(animation: rotationXAnimation)
-        
         return rotationXAnimation
     }
     
@@ -71,13 +67,11 @@ public class EZAnimations {
     public static func opacity() -> CABasicAnimation {
         
         let opacityAnimation = CABasicAnimation(keyPath: EZStrings.opacity.rawValue)
-        
         opacityAnimation.fromValue = 1
         opacityAnimation.toValue = 0.5
         opacityAnimation.duration = 0.4
         opacityAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         setCommonAnimationProperties(animation: opacityAnimation)
-        
         return opacityAnimation
     }
     
@@ -85,17 +79,18 @@ public class EZAnimations {
     public static func lineWidth(toValue: Any, duration: CFTimeInterval) -> CABasicAnimation {
         
         let lineWidthAnimation = CABasicAnimation(keyPath: EZStrings.lineWidth.rawValue)
-        
         lineWidthAnimation.toValue = toValue
         lineWidthAnimation.duration = duration
         lineWidthAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         setCommonAnimationProperties(animation: lineWidthAnimation)
-        
         return lineWidthAnimation
     }
     
     @discardableResult
-    public static func lineDashPhase(byValue:Any , duration: CFTimeInterval, option:CAMediaTimingFunctionName = .linear, autoreverse: Bool = false) -> CABasicAnimation {
+    public static func lineDashPhase(byValue:Any ,
+                                     duration: CFTimeInterval,
+                                     option:CAMediaTimingFunctionName = .linear,
+                                     autoreverse: Bool = false) -> CABasicAnimation {
         
         let lineDashPhaseAnimation = CABasicAnimation(keyPath: EZStrings.lineDashPhase.rawValue)
         lineDashPhaseAnimation.byValue = byValue
@@ -107,7 +102,9 @@ public class EZAnimations {
     }
     
     @discardableResult
-    public static func strokeEndAnimation(toValue:Any = 1.0, duration:CFTimeInterval = 0.75, option:CAMediaTimingFunctionName = .easeInEaseOut) -> CABasicAnimation {
+    public static func strokeEndAnimation(toValue:Any = 1.0,
+                                          duration:CFTimeInterval = 0.75,
+                                          option:CAMediaTimingFunctionName = .easeInEaseOut) -> CABasicAnimation {
         
         let strokeEndAnimation = CABasicAnimation(keyPath: EZStrings.strokeEnd.rawValue)
         strokeEndAnimation.toValue = 1.0
@@ -126,4 +123,3 @@ extension EZAnimations {
         animation.repeatCount = .infinity
     }
 }
-

@@ -58,16 +58,27 @@ extension LordOfTheRings: EZProgressAnimation {
     
     public func setAnimation() {
         
-        let transformAnimationInnerPulsate = EZAnimations.transform(toValue: 1.1, duration: 0.8, option: .easeOut)
-        let mainPulsateAnimation = EZAnimations.transform(fromValue: 1.14, toValue: 0.9, duration: 2, option: .easeInEaseOut)
+        let transformAnimationInnerPulsate = EZAnimations.transform(toValue: 1.1,
+                                                                    duration: 0.8,
+                                                                    option: .easeOut)
+        let mainPulsateAnimation = EZAnimations.transform(fromValue: 1.14,
+                                                          toValue: 0.9,
+                                                          duration: 2,
+                                                          option: .easeInEaseOut)
         let opacityAnimation = EZAnimations.opacity()
-        let transformScaleAnimation = EZAnimations.transform(toValue: 1.05, duration: 1.0, option: .easeInEaseOut)
+        let transformScaleAnimation = EZAnimations.transform(toValue: 1.05,
+                                                             duration: 1.0,
+                                                             option: .easeInEaseOut)
         
-        firstShapeLayer.add(transformScaleAnimation, forKey: EZStrings.hsKey0.rawValue)
-        secondShapeLayer.add(mainPulsateAnimation, forKey: EZStrings.hsKey1.rawValue)
-        thirdShapeLayer.add(transformAnimationInnerPulsate, forKey: EZStrings.hsKey2.rawValue)
-        titleLabel.layer.add(opacityAnimation, forKey: EZStrings.hsKey3.rawValue)
-        titleLabel.layer.add(transformScaleAnimation, forKey: EZStrings.hsKey4.rawValue)
+        firstShapeLayer.add(transformScaleAnimation,
+                            forKey: EZStrings.hsKey0.rawValue)
+        secondShapeLayer.add(mainPulsateAnimation,
+                             forKey: EZStrings.hsKey1.rawValue)
+        thirdShapeLayer.add(transformAnimationInnerPulsate,
+                            forKey: EZStrings.hsKey2.rawValue)
+        titleLabel.layer.add(opacityAnimation,
+                             forKey: EZStrings.hsKey3.rawValue)
+        titleLabel.layer.add(transformScaleAnimation,
+                             forKey: EZStrings.hsKey4.rawValue)
     }
 }
-

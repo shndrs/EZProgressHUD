@@ -73,11 +73,19 @@ extension HNK: EZProgressAnimation {
         firstShapeLayer.strokeEnd = 0.0
         
         let rotationYAnimation = EZAnimations.rotationY(duration: 6)
-        let transformScaleAnimation = EZAnimations.transform(toValue: 0.96, duration: 2.0, option: .easeInEaseOut)
-        let transformScaleAnimation3 = EZAnimations.transform(fromValue: 1.04, toValue: 1.09, duration: 3, option: .easeInEaseOut)
+        let transformScaleAnimation = EZAnimations.transform(toValue: 0.96,
+                                                             duration: 2.0,
+                                                             option: .easeInEaseOut)
+        let transformScaleAnimation3 = EZAnimations.transform(fromValue: 1.04,
+                                                              toValue: 1.09,
+                                                              duration: 3,
+                                                              option: .easeInEaseOut)
         let opacityAnimation = EZAnimations.opacity()
-        let lineDashPhaseAnimation = EZAnimations.lineDashPhase(byValue: 18.0, duration: 0.75)
-        let strokeEndAnimation = EZAnimations.strokeEndAnimation(toValue: 1, duration: 0.4, option: .easeIn)
+        let lineDashPhaseAnimation = EZAnimations.lineDashPhase(byValue: 18.0,
+                                                                duration: 0.75)
+        let strokeEndAnimation = EZAnimations.strokeEndAnimation(toValue: 1,
+                                                                 duration: 0.4,
+                                                                 option: .easeIn)
         
         firstShapeLayer.add(transformScaleAnimation, forKey: EZStrings.hsKey0.rawValue)
         secondShapeLayer.add(rotationYAnimation, forKey: EZStrings.hsKey1.rawValue)
@@ -89,5 +97,3 @@ extension HNK: EZProgressAnimation {
         firstShapeLayer.add(strokeEndAnimation, forKey: EZStrings.hsKey7.rawValue)
     }
 }
-
-

@@ -59,9 +59,13 @@ extension YRotation: EZProgressAnimation {
     public func setAnimation() {
         
         let rotationXAnimation = EZAnimations.rotationY(duration: 4)
-        let transformAnimationInnerPulsate = EZAnimations.transform(toValue: 1.1, duration: 0.8, option: .easeOut)
+        let transformAnimationInnerPulsate = EZAnimations.transform(toValue: 1.1,
+                                                                    duration: 0.8,
+                                                                    option: .easeOut)
         let opacityAnimation = EZAnimations.opacity()
-        let transformScaleAnimation = EZAnimations.transform(toValue: 1.05, duration: 1.0, option: .easeInEaseOut)
+        let transformScaleAnimation = EZAnimations.transform(toValue: 1.05,
+                                                             duration: 1.0,
+                                                             option: .easeInEaseOut)
         
         firstShapeLayer.add(transformScaleAnimation, forKey: EZStrings.hsKey0.rawValue)
         secondShapeLayer.add(rotationXAnimation, forKey: EZStrings.hsKey1.rawValue)

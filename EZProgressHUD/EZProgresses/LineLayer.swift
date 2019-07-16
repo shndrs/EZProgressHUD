@@ -65,10 +65,18 @@ extension LineLayer: EZProgressAnimation {
         firstShapeLayer.strokeStart = 0.0
         firstShapeLayer.strokeEnd = 0.0
         
-        let lineDashPhaseAnimation = EZAnimations.lineDashPhase(byValue: 158.0, duration: 3.75, option: .easeInEaseOut, autoreverse: true)
-        let lineWidthAnimation = EZAnimations.lineWidth(toValue: (options.strokeWidth / 4) + 2.5, duration: 0.3)
-        let scaleTransformAnimation = EZAnimations.transform(fromValue: 1, toValue: 1.06, duration: 1.1, option: .easeIn)
-        let thirdLineWidthAnimation = EZAnimations.lineWidth(toValue: (options.strokeWidth - 1.0), duration: 0.3)
+        let lineDashPhaseAnimation = EZAnimations.lineDashPhase(byValue: 158.0,
+                                                                duration: 3.75,
+                                                                option: .easeInEaseOut,
+                                                                autoreverse: true)
+        let lineWidthAnimation = EZAnimations.lineWidth(toValue: (options.strokeWidth / 4) + 2.5,
+                                                        duration: 0.3)
+        let scaleTransformAnimation = EZAnimations.transform(fromValue: 1,
+                                                             toValue: 1.06,
+                                                             duration: 1.1,
+                                                             option: .easeIn)
+        let thirdLineWidthAnimation = EZAnimations
+            .lineWidth(toValue: (options.strokeWidth - 1.0), duration: 0.3)
         let opacityAnimation = EZAnimations.opacity()
         let strokeEndAnimation = EZAnimations.strokeEndAnimation(duration: 2)
         
