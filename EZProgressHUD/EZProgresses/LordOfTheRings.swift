@@ -8,38 +8,8 @@
 
 import UIKit
 
-final public class LordOfTheRings: EZBaseView {}
-
-// MARK: EZProgressProtocol Impelementation
-
-extension LordOfTheRings: EZProgress {
-    
-    public func show() {
-        setLayers()
-        showBlock()
-    }
-    
-    public func dismiss(completion: (() -> Void)?) {
-        dismissBlock(completion: completion)
-    }
-}
-
-// MARK: Set Animation And Layers
-
-extension LordOfTheRings: EZProgressAnimation {
-    
-    public func setLayers() {
-        transView.alpha = 0
-        titleLabel.frame = CGRect(x: 0, y: 0, width: 140, height: 110)
-        titleLabel.center = transView.center
-        transView.addSubview(titleLabel)
-        layerGenerator(shapeLayer: secondShapeLayer, type: .secondShapeLayer)
-        layerGenerator(shapeLayer: thirdShapeLayer, type: .thirdShapeLayer)
-        layerGenerator(shapeLayer: firstShapeLayer, type: .firstShapeLayer)
-        setAnimation()
-    }
-    
-    public func setAnimation() {
+final public class LordOfTheRings: EZBaseProgresses {
+    public override func setAnimation() {
         let innerPulsateArgs = TransformArguments(toValue: 1.1, duration: 0.8, option: .easeOut)
         let transformAnimationInnerPulsate = EZAnimations.transform(with: innerPulsateArgs)
         let mainPulsateArgs = TransformArguments(fromValue: 1.14, toValue: 0.9, duration: 2,
