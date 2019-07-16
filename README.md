@@ -2,6 +2,7 @@
 
 # EZProgressHUD
 
+[![codebeat badge](https://codebeat.co/badges/82888c2c-2465-4840-ad7d-af0a3239c051)](https://codebeat.co/projects/github-com-shndrs-ezprogresshud-master)
 ![build-status](https://travis-ci.org/shndrs/EZProgressHUD.svg?branch=master)
 ![swift-version](https://img.shields.io/badge/Swift-5-blueviolet.svg)
 ![version](https://img.shields.io/cocoapods/v/EZProgressHUD.svg)
