@@ -8,37 +8,7 @@
 
 import UIKit
 
-final public class HNK: EZBaseView {}
-
-// MARK: EZProgressProtocol Impelementation
-
-extension HNK: EZProgress {
-    
-    public func show() {
-        setLayers()
-        showBlock()
-    }
-    
-    public func dismiss(completion: (() -> Void)?) {
-        dismissBlock(completion: completion)
-    }
-}
-
-// MARK: Set Animation And Layers
-
-extension HNK: EZProgressAnimation {
-    
-    public func setLayers() {
-        transView.alpha = 0
-        titleLabel.frame = CGRect(x: 0, y: 0, width: 140, height: 70)
-        titleLabel.center = transView.center
-        transView.addSubview(titleLabel)
-        layerGenerator(shapeLayer: secondShapeLayer, type: .secondShapeLayer)
-        layerGenerator(shapeLayer: thirdShapeLayer, type: .thirdShapeLayer)
-        layerGenerator(shapeLayer: firstShapeLayer, type: .firstShapeLayer)
-        setAnimation()
-    }
-    
+final public class HNK: EZBaseProgresses {
     fileprivate func setProperties() {
         firstShapeLayer.lineWidth = options.strokeWidth
         firstShapeLayer.lineDashPattern = [5]
@@ -50,7 +20,7 @@ extension HNK: EZProgressAnimation {
         firstShapeLayer.strokeEnd = 0.0
     }
     
-    public func setAnimation() {
+    public override func setAnimation() {
         setProperties()
         let rotationYAnimation = EZAnimations.rotationY(duration: 6)
         let transformScaleArgs = TransformArguments(toValue: 0.96, duration: 2.0,
