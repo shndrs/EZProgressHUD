@@ -22,14 +22,15 @@ public enum EZAnimationOptions {
 
 @requires_stored_property_inits public class EZProgressOptions {
     
+    private static let red = UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1)
     /// the stroke width of circles (by default is 12.0)
     public var strokeWidth: CGFloat = 12.0
     
     /// the color of main circle (default is red)
-    public var firstLayerStrokeColor: UIColor = UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1)
+    public var firstLayerStrokeColor: UIColor = red
     
     /// the color of second circle layer which is transparent (default is red)
-    public var secondLayerStrokeColor: UIColor = UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1)
+    public var secondLayerStrokeColor: UIColor = red
     
     /// the color of third circle layer (by default is .gray)
     public var thirdLayerStrokeColor: UIColor = UIColor.gray

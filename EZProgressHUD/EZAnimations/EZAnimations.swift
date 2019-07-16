@@ -41,11 +41,7 @@ public class EZAnimations {
     public static func rotationX(duration: CFTimeInterval) -> CABasicAnimation {
         
         let rotationXAnimation = CABasicAnimation(keyPath: EZStrings.transformRotationX.rawValue)
-        rotationXAnimation.fromValue = 0
-        rotationXAnimation.toValue = CGFloat.pi * 2
-        rotationXAnimation.duration = duration
-        rotationXAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
-        setCommonAnimationProperties(animation: rotationXAnimation)
+        rotationsCommons(animation: rotationXAnimation, duration: duration)
         return rotationXAnimation
     }
     
@@ -53,13 +49,7 @@ public class EZAnimations {
     public static func rotationY(duration: CFTimeInterval) -> CABasicAnimation {
         
         let rotationXAnimation = CABasicAnimation(keyPath: EZStrings.transformRotationY.rawValue)
-        
-        rotationXAnimation.fromValue = 0
-        rotationXAnimation.toValue = CGFloat.pi * 2
-        rotationXAnimation.duration = duration
-        rotationXAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
-        setCommonAnimationProperties(animation: rotationXAnimation)
-        
+        rotationsCommons(animation: rotationXAnimation, duration: duration)
         return rotationXAnimation
     }
     
@@ -121,5 +111,12 @@ extension EZAnimations {
     fileprivate class func setCommonAnimationProperties(animation: CABasicAnimation) {
         animation.autoreverses = true
         animation.repeatCount = .infinity
+    }
+    fileprivate class func rotationsCommons(animation: CABasicAnimation, duration: CFTimeInterval) {
+        animation.fromValue = 0
+        animation.toValue = CGFloat.pi * 2
+        animation.duration = duration
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
+        setCommonAnimationProperties(animation: animation)
     }
 }
