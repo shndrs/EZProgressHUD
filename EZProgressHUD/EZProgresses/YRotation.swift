@@ -40,7 +40,6 @@ extension YRotation: EZProgressAnimation {
     }
     
     public func setAnimation() {
-        
         let rotationYAnimation = EZAnimations.rotationY(duration: 4)
         let innerPulsateArgs = TransformArguments(toValue: 1.1, duration: 0.8, option: .easeOut)
         let transformAnimationInnerPulsate = EZAnimations.transform(with: innerPulsateArgs)

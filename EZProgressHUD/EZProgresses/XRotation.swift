@@ -40,7 +40,6 @@ extension XRotation: EZProgressAnimation {
     }
     
     public func setAnimation() {
-        
         let rotationXAnimation = EZAnimations.rotationX(duration: 4)
         let innerPulsateArgs = TransformArguments(toValue: 1.1, duration: 0.8,
                                                   option: .easeOut)
@@ -50,15 +49,10 @@ extension XRotation: EZProgressAnimation {
                                                     option: .easeInEaseOut)
         let transformScaleAnimation = EZAnimations.transform(with: transformScaleArgs)
         
-        firstShapeLayer.add(transformScaleAnimation,
-                            forKey: EZStrings.hsKey0.rawValue)
-        secondShapeLayer.add(rotationXAnimation,
-                             forKey: EZStrings.hsKey1.rawValue)
-        thirdShapeLayer.add(transformAnimationInnerPulsate,
-                            forKey: EZStrings.hsKey2.rawValue)
-        titleLabel.layer.add(opacityAnimation,
-                             forKey: EZStrings.hsKey3.rawValue)
-        titleLabel.layer.add(transformScaleAnimation,
-                             forKey: EZStrings.hsKey4.rawValue)
+        firstShapeLayer.add(transformScaleAnimation, forKey: EZStrings.hsKey0.rawValue)
+        secondShapeLayer.add(rotationXAnimation, forKey: EZStrings.hsKey1.rawValue)
+        thirdShapeLayer.add(transformAnimationInnerPulsate, forKey: EZStrings.hsKey2.rawValue)
+        titleLabel.layer.add(opacityAnimation, forKey: EZStrings.hsKey3.rawValue)
+        titleLabel.layer.add(transformScaleAnimation, forKey: EZStrings.hsKey4.rawValue)
     }
 }

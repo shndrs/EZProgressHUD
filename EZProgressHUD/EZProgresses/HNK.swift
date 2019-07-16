@@ -41,20 +41,19 @@ extension HNK: EZProgressAnimation {
         setAnimation()
     }
     
-    public func setAnimation() {
-        
+    fileprivate func setProperties() {
         firstShapeLayer.lineWidth = options.strokeWidth
         firstShapeLayer.lineDashPattern = [5]
-        
         secondShapeLayer.lineWidth = options.strokeWidth
         secondShapeLayer.lineDashPattern = [5]
-        
         thirdShapeLayer.lineWidth = options.strokeWidth
         thirdShapeLayer.lineDashPattern = [5]
-        
         firstShapeLayer.strokeStart = 0.0
         firstShapeLayer.strokeEnd = 0.0
-        
+    }
+    
+    public func setAnimation() {
+        setProperties()
         let rotationYAnimation = EZAnimations.rotationY(duration: 6)
         let transformScaleArgs = TransformArguments(toValue: 0.96, duration: 2.0,
                                                     option: .easeInEaseOut)
@@ -69,7 +68,6 @@ extension HNK: EZProgressAnimation {
         let strokeEndAnimation = EZAnimations.strokeEndAnimation(toValue: 1,
                                                                  duration: 0.4,
                                                                  option: .easeIn)
-        
         firstShapeLayer.add(transformScaleAnimation, forKey: EZStrings.hsKey0.rawValue)
         secondShapeLayer.add(rotationYAnimation, forKey: EZStrings.hsKey1.rawValue)
         thirdShapeLayer.add(transformScaleAnimation3, forKey: EZStrings.hsKey2.rawValue)

@@ -40,13 +40,11 @@ extension XYRotation: EZProgressAnimation {
     }
     
     public func setAnimation() {
-        
         let rotationXAnimation = EZAnimations.rotationX(duration: 6)
         let rotationYAnimation = EZAnimations.rotationY(duration: 3)
         let args = TransformArguments(toValue: 1.06, duration: 1.0, option: .easeInEaseOut)
         let transformScaleAnimation = EZAnimations.transform(with: args)
         let opacityAnimation = EZAnimations.opacity()
-        
         firstShapeLayer.add(transformScaleAnimation, forKey: EZStrings.hsKey0.rawValue)
         secondShapeLayer.add(rotationXAnimation, forKey: EZStrings.hsKey1.rawValue)
         thirdShapeLayer.add(rotationYAnimation, forKey: EZStrings.hsKey2.rawValue)

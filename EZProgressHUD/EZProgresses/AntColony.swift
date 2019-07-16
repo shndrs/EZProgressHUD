@@ -39,11 +39,13 @@ extension AntColony: EZProgressAnimation {
         setAnimation()
     }
     
-    public func setAnimation() {
-        
+    fileprivate func setProperties() {
         firstShapeLayer.lineWidth = 5.0
         firstShapeLayer.lineDashPattern = [5]
-        
+    }
+    
+    public func setAnimation() {
+        setProperties()
         let lineDashArgs = LineDashPhaseArguments(byValue: 10.0, duration: 0.75,
                                                   option: .linear)
         let lineDashPhaseAnimation = EZAnimations.lineDashPhase(with: lineDashArgs)
@@ -54,7 +56,6 @@ extension AntColony: EZProgressAnimation {
                                                              duration: 2)
         let opacityAnimation = EZAnimations.opacity()
         let transformXAnimation = EZAnimations.transformX()
-        
         secondShapeLayer.add(scaleTransformAnimation, forKey: EZStrings.hsKey1.rawValue)
         thirdShapeLayer.add(thirdLineWidthAnimation, forKey: EZStrings.hsKey2.rawValue)
         titleLabel.layer.add(opacityAnimation, forKey: EZStrings.hsKey3.rawValue)

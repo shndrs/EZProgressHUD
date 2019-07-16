@@ -39,13 +39,15 @@ extension LineLayer: EZProgressAnimation {
         setAnimation()
     }
     
-    public func setAnimation() {
-        
+    fileprivate func setProperties() {
         firstShapeLayer.lineWidth = (options.strokeWidth / 4) + 1
         firstShapeLayer.lineDashPattern = [5]
         firstShapeLayer.strokeStart = 0.0
         firstShapeLayer.strokeEnd = 0.0
-        
+    }
+    
+    public func setAnimation() {
+        setProperties()
         let lineDashArgs = LineDashPhaseArguments(byValue: 158.0,
                                                   autoreverse: true, duration: 3.75,
                                                   option: .easeInEaseOut)
