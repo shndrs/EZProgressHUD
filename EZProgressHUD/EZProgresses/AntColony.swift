@@ -8,43 +8,13 @@
 
 import UIKit
 
-final public class AntColony: EZBaseView {}
-
-// MARK: EZProgressProtocol Impelementation
-
-extension AntColony: EZProgress {
-    
-    public func show() {
-        setLayers()
-        showBlock()
-    }
-    
-    public func dismiss(completion: (() -> Void)?) {
-        dismissBlock(completion: completion)
-    }
-}
-
-// MARK: Set Animation And Layers
-
-extension AntColony: EZProgressAnimation {
-    
-    public func setLayers() {
-        transView.alpha = 0
-        titleLabel.frame = CGRect(x: 0, y: 0, width: 140, height: 70)
-        titleLabel.center = transView.center
-        transView.addSubview(titleLabel)
-        layerGenerator(shapeLayer: secondShapeLayer, type: .secondShapeLayer)
-        layerGenerator(shapeLayer: thirdShapeLayer, type: .thirdShapeLayer)
-        layerGenerator(shapeLayer: firstShapeLayer, type: .firstShapeLayer)
-        setAnimation()
-    }
-    
+final public class AntColony: EZBaseProgresses {
     fileprivate func setProperties() {
         firstShapeLayer.lineWidth = 5.0
         firstShapeLayer.lineDashPattern = [5]
     }
     
-    public func setAnimation() {
+    public override func setAnimation() {
         setProperties()
         let lineDashArgs = LineDashPhaseArguments(byValue: 10.0, duration: 0.75,
                                                   option: .linear)
@@ -63,4 +33,3 @@ extension AntColony: EZProgressAnimation {
         firstShapeLayer.add(lineDashPhaseAnimation, forKey: EZStrings.hsKey4.rawValue)
     }
 }
-
