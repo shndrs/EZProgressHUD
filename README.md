@@ -30,7 +30,7 @@ let hud = EZProgressHUD.setProgress(with: options)
 And now you can show or dismiss the hud by :
 
 ```Swift
-hud.show() // for show it
+hud.show()                   // for show it
 hud.dismiss(completion: nil) // for dismiss it
 ```
 
@@ -97,7 +97,8 @@ Requirements
 =======
 
 <p>iOS 9.3+</p>
-<p>Swift 4.2 / Swift 5</p>
+<p>Xcode 10.2 or later</p>
+<p>Swift 4.2 or later</p>
 
 Installation
 =======
