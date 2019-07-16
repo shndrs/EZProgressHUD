@@ -75,16 +75,13 @@ public class EZAnimations {
     }
     
     @discardableResult
-    public static func lineDashPhase(byValue:Any ,
-                                     duration: CFTimeInterval,
-                                     option:CAMediaTimingFunctionName = .linear,
-                                     autoreverse: Bool = false) -> CABasicAnimation {
+    public static func lineDashPhase(with object: LineDashPhaseArguments) -> CABasicAnimation {
         
         let lineDashPhaseAnimation = CABasicAnimation(keyPath: EZStrings.lineDashPhase.rawValue)
-        lineDashPhaseAnimation.byValue = byValue
-        lineDashPhaseAnimation.duration = duration
-        lineDashPhaseAnimation.timingFunction = CAMediaTimingFunction(name: option)
-        lineDashPhaseAnimation.autoreverses = autoreverse
+        lineDashPhaseAnimation.byValue = object.byValue
+        lineDashPhaseAnimation.duration = object.duration
+        lineDashPhaseAnimation.timingFunction = CAMediaTimingFunction(name: object.option)
+        lineDashPhaseAnimation.autoreverses = object.autoreverse
         lineDashPhaseAnimation.repeatCount = .infinity
         return lineDashPhaseAnimation
     }

@@ -44,10 +44,9 @@ extension AntColony: EZProgressAnimation {
         firstShapeLayer.lineWidth = 5.0
         firstShapeLayer.lineDashPattern = [5]
         
-        let lineDashPhaseAnimation = EZAnimations.lineDashPhase(byValue: 10.0,
-                                                                duration: 0.75,
-                                                                option: .linear,
-                                                                autoreverse: false)
+        let lineDashArgs = LineDashPhaseArguments(byValue: 10.0, duration: 0.75,
+                                                  option: .linear)
+        let lineDashPhaseAnimation = EZAnimations.lineDashPhase(with: lineDashArgs)
         let scaleTransformArgs = TransformArguments(fromValue: 1.14, toValue: 0.93,
                                                     duration: 2, option: .linear)
         let scaleTransformAnimation = EZAnimations.transform(with: scaleTransformArgs)

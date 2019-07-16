@@ -46,10 +46,10 @@ extension LineLayer: EZProgressAnimation {
         firstShapeLayer.strokeStart = 0.0
         firstShapeLayer.strokeEnd = 0.0
         
-        let lineDashPhaseAnimation = EZAnimations.lineDashPhase(byValue: 158.0,
-                                                                duration: 3.75,
-                                                                option: .easeInEaseOut,
-                                                                autoreverse: true)
+        let lineDashArgs = LineDashPhaseArguments(byValue: 158.0,
+                                                  autoreverse: true, duration: 3.75,
+                                                  option: .easeInEaseOut)
+        let lineDashPhaseAnimation = EZAnimations.lineDashPhase(with: lineDashArgs)
         let lineWidthAnimation = EZAnimations.lineWidth(toValue: (options.strokeWidth / 4) + 2.5,
                                                         duration: 0.3)
         let scaleTransformArgs = TransformArguments(toValue: 1.06, duration: 1.1, option: .easeIn)

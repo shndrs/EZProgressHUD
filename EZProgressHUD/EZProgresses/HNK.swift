@@ -63,8 +63,9 @@ extension HNK: EZProgressAnimation {
                                                      duration: 4, option: .easeInEaseOut)
         let transformScaleAnimation3 = EZAnimations.transform(with: transformScaleArgs3)
         let opacityAnimation = EZAnimations.opacity()
-        let lineDashPhaseAnimation = EZAnimations.lineDashPhase(byValue: 18.0,
-                                                                duration: 0.75)
+        let lineDashArgs = LineDashPhaseArguments(byValue: 18.0, duration: 0.75,
+                                                  option: .linear)
+        let lineDashPhaseAnimation = EZAnimations.lineDashPhase(with: lineDashArgs)
         let strokeEndAnimation = EZAnimations.strokeEndAnimation(toValue: 1,
                                                                  duration: 0.4,
                                                                  option: .easeIn)
