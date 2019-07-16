@@ -8,38 +8,8 @@
 
 import UIKit
 
-final public class XYRotation: EZBaseView {}
-
-// MARK: EZProgressProtocol Impelementation
-
-extension XYRotation: EZProgress {
-    
-    public func show() {
-        setLayers()
-        showBlock()
-    }
-    
-    public func dismiss(completion: (() -> Void)?) {
-        dismissBlock(completion: completion)
-    }
-}
-
-// MARK: Set Animation And Layers
-
-extension XYRotation: EZProgressAnimation {
-    
-    public func setLayers() {
-        transView.alpha = 0
-        titleLabel.frame = CGRect(x: 0, y: 0, width: 140, height: 70)
-        titleLabel.center = transView.center
-        transView.addSubview(titleLabel)
-        layerGenerator(shapeLayer: secondShapeLayer, type: .secondShapeLayer)
-        layerGenerator(shapeLayer: thirdShapeLayer, type: .thirdShapeLayer)
-        layerGenerator(shapeLayer: firstShapeLayer, type: .firstShapeLayer)
-        setAnimation()
-    }
-    
-    public func setAnimation() {
+final public class XYRotation: EZBaseProgresses {
+    public override func setAnimation() {
         let rotationXAnimation = EZAnimations.rotationX(duration: 6)
         let rotationYAnimation = EZAnimations.rotationY(duration: 3)
         let args = TransformArguments(toValue: 1.06, duration: 1.0, option: .easeInEaseOut)
