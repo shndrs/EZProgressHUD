@@ -15,29 +15,12 @@ final public class YRotation: EZBaseView {}
 extension YRotation: EZProgress {
     
     public func show() {
-        
         setLayers()
-        UIApplication.shared.keyWindow?.isUserInteractionEnabled = false
-        UIApplication.shared.keyWindow?.addSubview(transView)
-        
-        UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseInOut, animations: {
-            self.transView.alpha = 1
-            self.transView.layoutIfNeeded()
-        })
+        showBlock()
     }
     
     public func dismiss(completion: (() -> Void)?) {
-        
-        UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseInOut, animations: {
-            
-            self.transView.alpha = 0
-            self.transView.layoutIfNeeded()
-        }) { _ in
-            
-            self.transView.removeFromSuperview()
-            UIApplication.shared.keyWindow?.isUserInteractionEnabled = true
-            completion?()
-        }
+        dismissBlock(completion: completion)
     }
 }
 
@@ -58,7 +41,7 @@ extension YRotation: EZProgressAnimation {
     
     public func setAnimation() {
         
-        let rotationXAnimation = EZAnimations.rotationY(duration: 4)
+        let rotationYAnimation = EZAnimations.rotationY(duration: 4)
         let transformAnimationInnerPulsate = EZAnimations.transform(toValue: 1.1,
                                                                     duration: 0.8,
                                                                     option: .easeOut)
@@ -66,9 +49,8 @@ extension YRotation: EZProgressAnimation {
         let transformScaleAnimation = EZAnimations.transform(toValue: 1.05,
                                                              duration: 1.0,
                                                              option: .easeInEaseOut)
-        
         firstShapeLayer.add(transformScaleAnimation, forKey: EZStrings.hsKey0.rawValue)
-        secondShapeLayer.add(rotationXAnimation, forKey: EZStrings.hsKey1.rawValue)
+        secondShapeLayer.add(rotationYAnimation, forKey: EZStrings.hsKey1.rawValue)
         thirdShapeLayer.add(transformAnimationInnerPulsate, forKey: EZStrings.hsKey2.rawValue)
         titleLabel.layer.add(opacityAnimation, forKey: EZStrings.hsKey3.rawValue)
         titleLabel.layer.add(transformScaleAnimation, forKey: EZStrings.hsKey4.rawValue)
