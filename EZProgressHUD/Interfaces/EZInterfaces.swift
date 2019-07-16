@@ -8,9 +8,9 @@
 
 import Foundation
 
-public protocol EZProgressAnimation {
-    func setAnimation() -> Void
-    func setLayers() -> Void
+@objc public protocol EZProgressAnimation {
+    @objc func setAnimation() -> Void
+    @objc func setLayers() -> Void
 }
 
 public protocol EZProgress {

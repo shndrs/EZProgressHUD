@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F485D05F22DDCB9100EEFED9 /* EZAnimationArgument.swift in Sources */ = {isa = PBXBuildFile; fileRef = F485D05E22DDCB9100EEFED9 /* EZAnimationArgument.swift */; };
+		F485D06122DDDD8A00EEFED9 /* EZBaseProgresses.swift in Sources */ = {isa = PBXBuildFile; fileRef = F485D06022DDDD8A00EEFED9 /* EZBaseProgresses.swift */; };
 		F4A9A70422D9BC5A006467C9 /* EZProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4EAFB3322D31F2800689062 /* EZProgressHUD.framework */; };
 		F4EAFB3D22D31F2800689062 /* EZProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4EAFB3322D31F2800689062 /* EZProgressHUD.framework */; };
 		F4EAFB4222D31F2800689062 /* EZProgressHUDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EAFB4122D31F2800689062 /* EZProgressHUDTests.swift */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		F485D05E22DDCB9100EEFED9 /* EZAnimationArgument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZAnimationArgument.swift; sourceTree = "<group>"; };
+		F485D06022DDDD8A00EEFED9 /* EZBaseProgresses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZBaseProgresses.swift; sourceTree = "<group>"; };
 		F4EAFB3322D31F2800689062 /* EZProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EZProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4EAFB3622D31F2800689062 /* EZProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EZProgressHUD.h; sourceTree = "<group>"; };
 		F4EAFB3722D31F2800689062 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 				F4EAFB8022D33CC100689062 /* YRotation.swift */,
 				F4EAFB8222D33D1900689062 /* AntColony.swift */,
 				F4EAFB8422D33D3400689062 /* HNK.swift */,
+				F485D06022DDDD8A00EEFED9 /* EZBaseProgresses.swift */,
 			);
 			path = EZProgresses;
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 				F4EAFB7122D3301C00689062 /* EZAnimations.swift in Sources */,
 				F4EAFB7D22D33C4D00689062 /* XRotation.swift in Sources */,
 				F4EAFB6522D32E8100689062 /* EZInterfaces.swift in Sources */,
+				F485D06122DDDD8A00EEFED9 /* EZBaseProgresses.swift in Sources */,
 				F485D05F22DDCB9100EEFED9 /* EZAnimationArgument.swift in Sources */,
 				F4EAFB6B22D32F9F00689062 /* EZStrings.swift in Sources */,
 				F4EAFB7422D336F100689062 /* EZFactory.swift in Sources */,

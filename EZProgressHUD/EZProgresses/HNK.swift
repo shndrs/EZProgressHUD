@@ -8,9 +8,7 @@
 
 import UIKit
 
-final public class HNK: EZBaseView {
-    public override func layoutSubviews() {}
-}
+final public class HNK: EZBaseView {}
 
 // MARK: EZProgressProtocol Impelementation
 
