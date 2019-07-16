@@ -10,8 +10,10 @@ import UIKit
 
 final public class XYRotation: EZBaseProgresses {
     public override func setAnimation() {
-        let rotationXAnimation = EZAnimations.rotationX(duration: 6)
-        let rotationYAnimation = EZAnimations.rotationY(duration: 3)
+        let rotationXAnimation = EZAnimations.rotation(duration: 6,
+                                                       rotationMode: .xRotation)
+        let rotationYAnimation = EZAnimations.rotation(duration: 3,
+                                                       rotationMode: .yRotation)
         let args = TransformArguments(toValue: 1.06, duration: 1.0, option: .easeInEaseOut)
         let transformScaleAnimation = EZAnimations.transform(with: args)
         let opacityAnimation = EZAnimations.opacity()

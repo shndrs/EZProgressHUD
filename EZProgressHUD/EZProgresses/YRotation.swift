@@ -10,7 +10,8 @@ import UIKit
 
 final public class YRotation: EZBaseProgresses {
     public override func setAnimation() {
-        let rotationYAnimation = EZAnimations.rotationY(duration: 4)
+        let rotationYAnimation = EZAnimations.rotation(duration: 4,
+                                                       rotationMode: .yRotation)
         let innerPulsateArgs = TransformArguments(toValue: 1.1, duration: 0.8, option: .easeOut)
         let transformAnimationInnerPulsate = EZAnimations.transform(with: innerPulsateArgs)
         let opacityAnimation = EZAnimations.opacity()

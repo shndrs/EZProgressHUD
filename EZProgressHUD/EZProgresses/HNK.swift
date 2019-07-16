@@ -22,7 +22,8 @@ final public class HNK: EZBaseProgresses {
     
     public override func setAnimation() {
         setProperties()
-        let rotationYAnimation = EZAnimations.rotationY(duration: 6)
+        let rotationYAnimation = EZAnimations.rotation(duration: 6,
+                                                       rotationMode: .yRotation)
         let transformScaleArgs = TransformArguments(toValue: 0.96, duration: 2.0,
                                                     option: .easeInEaseOut)
         let transformScaleAnimation = EZAnimations.transform(with: transformScaleArgs)

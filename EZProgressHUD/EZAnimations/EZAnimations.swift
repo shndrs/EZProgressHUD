@@ -8,6 +8,10 @@
 
 import UIKit
 
+public enum RotationMode {
+    case xRotation, yRotation
+}
+
 public class EZAnimations {
     
     private init() {}
@@ -36,19 +40,19 @@ public class EZAnimations {
     }
     
     @discardableResult
-    public static func rotationX(duration: CFTimeInterval) -> CABasicAnimation {
+    public static func rotation(duration: CFTimeInterval,
+                                rotationMode:RotationMode) -> CABasicAnimation {
+        var rotationAnimation = CABasicAnimation()
         
-        let rotationXAnimation = CABasicAnimation(keyPath: EZStrings.transformRotationX.rawValue)
-        rotationsCommons(animation: rotationXAnimation, duration: duration)
-        return rotationXAnimation
-    }
-    
-    @discardableResult
-    public static func rotationY(duration: CFTimeInterval) -> CABasicAnimation {
+        switch rotationMode {
         
-        let rotationXAnimation = CABasicAnimation(keyPath: EZStrings.transformRotationY.rawValue)
-        rotationsCommons(animation: rotationXAnimation, duration: duration)
-        return rotationXAnimation
+        case .xRotation:
+            rotationAnimation = CABasicAnimation(keyPath: EZStrings.transformRotationX.rawValue)
+        case .yRotation:
+            rotationAnimation = CABasicAnimation(keyPath: EZStrings.transformRotationY.rawValue)
+        }
+        rotationsCommons(animation: rotationAnimation, duration: duration)
+        return rotationAnimation
     }
     
     @discardableResult
