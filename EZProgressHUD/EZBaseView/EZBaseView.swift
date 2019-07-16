@@ -91,22 +91,27 @@ open class EZBaseView: UIView {
         UIApplication.shared.keyWindow?.isUserInteractionEnabled = false
         UIApplication.shared.keyWindow?.addSubview(transView)
         
-        UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseInOut, animations: {
-            self.transView.alpha = 1
-            self.transView.layoutIfNeeded()
-        })
+        transViewAnimation(completion: nil)
     }
     
     public func dismissBlock(completion: (() -> Void)?) {
-        UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseInOut, animations: {
-            
-            self.transView.alpha = 0
-            self.transView.layoutIfNeeded()
-        }) { _ in
-            
+        
+        let completionHandler = { (success:Bool) in
             self.transView.removeFromSuperview()
             UIApplication.shared.keyWindow?.isUserInteractionEnabled = true
             completion?()
         }
+        transViewAnimation(completion: completionHandler)
+    }
+    
+    private func transViewAnimation(completion: ((Bool) -> Void)?) {
+        
+        UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseInOut, animations: {
+            if self.transView.alpha == 1 {
+                self.transView.alpha = 0
+            } else {
+                self.transView.alpha = 1
+            }
+        }, completion: completion)
     }
 }
