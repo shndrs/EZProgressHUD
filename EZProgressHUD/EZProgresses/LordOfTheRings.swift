@@ -40,18 +40,15 @@ extension LordOfTheRings: EZProgressAnimation {
     }
     
     public func setAnimation() {
-        
-        let transformAnimationInnerPulsate = EZAnimations.transform(toValue: 1.1,
-                                                                    duration: 0.8,
-                                                                    option: .easeOut)
-        let mainPulsateAnimation = EZAnimations.transform(fromValue: 1.14,
-                                                          toValue: 0.9,
-                                                          duration: 2,
-                                                          option: .easeInEaseOut)
+        let innerPulsateArgs = TransformArguments(toValue: 1.1, duration: 0.8, option: .easeOut)
+        let transformAnimationInnerPulsate = EZAnimations.transform(with: innerPulsateArgs)
+        let mainPulsateArgs = TransformArguments(fromValue: 1.14, toValue: 0.9, duration: 2,
+                                                 option: .easeInEaseOut)
+        let mainPulsateAnimation = EZAnimations.transform(with: mainPulsateArgs)
         let opacityAnimation = EZAnimations.opacity()
-        let transformScaleAnimation = EZAnimations.transform(toValue: 1.05,
-                                                             duration: 1.0,
-                                                             option: .easeInEaseOut)
+        let transformScaleArgs = TransformArguments(toValue: 1.05, duration: 1.0,
+                                                    option: .easeInEaseOut)
+        let transformScaleAnimation = EZAnimations.transform(with: transformScaleArgs)
         
         firstShapeLayer.add(transformScaleAnimation,
                             forKey: EZStrings.hsKey0.rawValue)

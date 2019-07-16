@@ -13,14 +13,12 @@ public class EZAnimations {
     private init() {}
     
     @discardableResult
-    public static func transform(fromValue:Any = 1,
-                                 toValue: Any, duration: CFTimeInterval,
-                                 option:CAMediaTimingFunctionName) -> CABasicAnimation {
+    public static func transform(with object: TransformArguments) -> CABasicAnimation {
         
         let transformScaleAnimation = CABasicAnimation(keyPath: EZStrings.transformScale.rawValue)
-        transformScaleAnimation.toValue = toValue
-        transformScaleAnimation.duration = duration
-        transformScaleAnimation.timingFunction = CAMediaTimingFunction(name: option)
+        transformScaleAnimation.toValue = object.toValue
+        transformScaleAnimation.duration = object.duration
+        transformScaleAnimation.timingFunction = CAMediaTimingFunction(name: object.option)
         setCommonAnimationProperties(animation: transformScaleAnimation)
         return transformScaleAnimation
     }

@@ -43,9 +43,8 @@ extension XYRotation: EZProgressAnimation {
         
         let rotationXAnimation = EZAnimations.rotationX(duration: 6)
         let rotationYAnimation = EZAnimations.rotationY(duration: 3)
-        let transformScaleAnimation = EZAnimations.transform(toValue: 1.06,
-                                                             duration: 1.0,
-                                                             option: .easeInEaseOut)
+        let args = TransformArguments(toValue: 1.06, duration: 1.0, option: .easeInEaseOut)
+        let transformScaleAnimation = EZAnimations.transform(with: args)
         let opacityAnimation = EZAnimations.opacity()
         
         firstShapeLayer.add(transformScaleAnimation, forKey: EZStrings.hsKey0.rawValue)
@@ -54,4 +53,3 @@ extension XYRotation: EZProgressAnimation {
         titleLabel.layer.add(opacityAnimation, forKey: EZStrings.hsKey3.rawValue)
     }
 }
-

@@ -88,9 +88,9 @@ open class EZBaseView: UIView {
     }
     
     public func showBlock() {
+        
         UIApplication.shared.keyWindow?.isUserInteractionEnabled = false
         UIApplication.shared.keyWindow?.addSubview(transView)
-        
         transViewAnimation(completion: nil)
     }
     

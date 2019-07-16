@@ -56,13 +56,12 @@ extension HNK: EZProgressAnimation {
         firstShapeLayer.strokeEnd = 0.0
         
         let rotationYAnimation = EZAnimations.rotationY(duration: 6)
-        let transformScaleAnimation = EZAnimations.transform(toValue: 0.96,
-                                                             duration: 2.0,
-                                                             option: .easeInEaseOut)
-        let transformScaleAnimation3 = EZAnimations.transform(fromValue: 1.04,
-                                                              toValue: 1.09,
-                                                              duration: 3,
-                                                              option: .easeInEaseOut)
+        let transformScaleArgs = TransformArguments(toValue: 0.96, duration: 2.0,
+                                                    option: .easeInEaseOut)
+        let transformScaleAnimation = EZAnimations.transform(with: transformScaleArgs)
+        let transformScaleArgs3 = TransformArguments(fromValue: 1.04, toValue: 1.09,
+                                                     duration: 4, option: .easeInEaseOut)
+        let transformScaleAnimation3 = EZAnimations.transform(with: transformScaleArgs3)
         let opacityAnimation = EZAnimations.opacity()
         let lineDashPhaseAnimation = EZAnimations.lineDashPhase(byValue: 18.0,
                                                                 duration: 0.75)

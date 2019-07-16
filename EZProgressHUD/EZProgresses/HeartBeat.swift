@@ -40,12 +40,10 @@ extension HeartBeat: EZProgressAnimation {
     
     public func setAnimation() {
         
-        let transformAnimation = EZAnimations.transform(toValue: 1.07,
-                                                        duration: 0.8,
-                                                        option: .easeOut)
-        let transformAnimationInnerPulsate = EZAnimations.transform(toValue: 0.95,
-                                                                    duration: 1.6,
-                                                                    option: .easeOut)
+        let transformAnimationObj = TransformArguments(toValue: 1.07, duration: 0.8, option: .easeOut)
+        let transformAnimation = EZAnimations.transform(with: transformAnimationObj)
+        let innerPulsateObj = TransformArguments(toValue: 0.95, duration: 1.6, option: .easeOut)
+        let transformAnimationInnerPulsate = EZAnimations.transform(with: innerPulsateObj)
         let opacityAnimation = EZAnimations.opacity()
         let transformXScaleAnimation = EZAnimations.transformX()
         
