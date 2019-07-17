@@ -11,6 +11,12 @@ import EZProgressHUD
 
 final class ViewController: UIViewController {
     
+    private let niceBlue = UIColor(red: 10/255, green: 101/255,
+                                   blue: 171/255, alpha: 1.0)
+    private let green = UIColor(red: 0.0/255.0, green: 145.0/255.0,
+                                blue: 60.0/255.0, alpha: 1.0)
+    private let darkGray = UIColor(red: 85.0/255.0, green: 85.0/255.0,
+                                   blue: 85.0/255.0, alpha: 1.0)
     // MARK: - HeartBeat HUD
     
     @IBAction private func heartBeatButtonPressed(_ sender: UIButton) {
@@ -97,10 +103,10 @@ final class ViewController: UIViewController {
     @IBAction private func yRotationButtonPressed(_ sender: UIButton) {
         
         let options = EZProgressOptions { (option) in
-            option.radius = 115
-            option.secondLayerStrokeColor = .brown
+            option.radius = 117
+            option.secondLayerStrokeColor = green
             option.strokeWidth = 12
-            option.thirdLayerStrokeColor = .gray
+            option.thirdLayerStrokeColor = .brown
             option.firstLayerStrokeColor = .darkGray
             option.title = "shndrs presents"
             option.animationOption = EZAnimationOptions.yRotation
@@ -117,14 +123,13 @@ final class ViewController: UIViewController {
     // MARK: - XYRotation HUD
     
     @IBAction private func xyRotationButtonPressed(_ sender: UIButton) {
-        let firstAndThirdColor = UIColor(red: 0.0/255.0, green: 145.0/255.0, blue: 60.0/255.0, alpha: 1.0)
         let options = EZProgressOptions { (option) in
             option.radius = 115
             option.secondLayerStrokeColor =
                 UIColor(red: 0.0/255.0, green: 205.0/255.0, blue: 60.0/255.0, alpha: 1.0)
             option.strokeWidth = 12
-            option.thirdLayerStrokeColor = firstAndThirdColor
-            option.firstLayerStrokeColor = firstAndThirdColor
+            option.thirdLayerStrokeColor = green
+            option.firstLayerStrokeColor = green
             option.title = "shndrs presents"
             option.animationOption = EZAnimationOptions.xyRotation
         }
@@ -143,8 +148,7 @@ final class ViewController: UIViewController {
         
         let options = EZProgressOptions { (option) in
             option.radius = 120
-            option.secondLayerStrokeColor =
-                UIColor(red: 85.0/255.0, green: 85.0/255.0, blue: 85.0/255.0, alpha: 1.0)
+            option.secondLayerStrokeColor = darkGray
             option.strokeWidth = 12
             option.thirdLayerStrokeColor = .darkGray
             option.firstLayerStrokeColor = .white
@@ -166,12 +170,10 @@ final class ViewController: UIViewController {
         
         let options = EZProgressOptions { (option) in
             option.radius = 115
-            option.secondLayerStrokeColor =
-                UIColor(red: 10/255, green: 101/255, blue: 171/255, alpha: 1.0)
+            option.secondLayerStrokeColor = niceBlue
             option.strokeWidth = 3
             option.thirdLayerStrokeColor = .gray
-            option.firstLayerStrokeColor =
-                UIColor(red: 10/255, green: 101/255, blue: 171/255, alpha: 1.0)
+            option.firstLayerStrokeColor = niceBlue
             option.title = "shndrs presents"
             option.animationOption = EZAnimationOptions.hnk
         }
