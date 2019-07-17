@@ -17,6 +17,8 @@ final class ViewController: UIViewController {
                                 blue: 60.0/255.0, alpha: 1.0)
     private let darkGray = UIColor(red: 85.0/255.0, green: 85.0/255.0,
                                    blue: 85.0/255.0, alpha: 1.0)
+    private let lightGray = UIColor(red: 240.0/255.0, green: 240.0/255.0,
+                                    blue: 240.0/255.0, alpha: 1.0)
     // MARK: - HeartBeat HUD
     
     @IBAction private func heartBeatButtonPressed(_ sender: UIButton) {
@@ -60,10 +62,8 @@ final class ViewController: UIViewController {
             option.radius = 120
             option.secondLayerStrokeColor = .white
             option.strokeWidth = 12
-            option.thirdLayerStrokeColor =
-                UIColor(red: 85.0/255.0, green: 85.0/255.0, blue: 85.0/255.0, alpha: 1.0)
-            option.firstLayerStrokeColor =
-                UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 1.0)
+            option.thirdLayerStrokeColor = darkGray
+            option.firstLayerStrokeColor = lightGray
             option.title = "shndrs presents"
             option.animationOption = EZAnimationOptions.lordOfTheRings
         }
@@ -125,8 +125,7 @@ final class ViewController: UIViewController {
     @IBAction private func xyRotationButtonPressed(_ sender: UIButton) {
         let options = EZProgressOptions { (option) in
             option.radius = 115
-            option.secondLayerStrokeColor =
-                UIColor(red: 0.0/255.0, green: 205.0/255.0, blue: 60.0/255.0, alpha: 1.0)
+            option.secondLayerStrokeColor = green
             option.strokeWidth = 12
             option.thirdLayerStrokeColor = green
             option.firstLayerStrokeColor = green
