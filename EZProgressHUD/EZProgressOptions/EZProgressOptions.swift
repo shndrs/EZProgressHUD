@@ -21,7 +21,7 @@ public enum EZAnimationOptions {
 }
 
 @requires_stored_property_inits
-public class titleOptions {
+public class EZTitleOptions {
     /// the stroke width of circles (by default is 12.0)
     public var strokeWidth: CGFloat = 12.0
     
@@ -36,7 +36,7 @@ public class titleOptions {
 }
 
 @requires_stored_property_inits
-public class EZProgressColorOptions: titleOptions {
+public class EZProgressColorOptions: EZTitleOptions {
     
     private static let red = UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1)
     
