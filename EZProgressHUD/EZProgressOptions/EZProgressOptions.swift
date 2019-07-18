@@ -20,7 +20,8 @@ public enum EZAnimationOptions {
     hnk
 }
 
-@requires_stored_property_inits public class EZProgressOptions {
+@requires_stored_property_inits
+public class EZProgressColorOptions {
     
     private static let red = UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1)
     /// the stroke width of circles (by default is 12.0)
@@ -35,6 +36,13 @@ public enum EZAnimationOptions {
     /// the color of third circle layer (by default is .gray)
     public var thirdLayerStrokeColor: UIColor = UIColor.gray
     
+    /// the background transparent view color (by default is black)
+    public var transViewBackgroundColor: UIColor = UIColor.black
+}
+
+@requires_stored_property_inits public
+class EZProgressOptions: EZProgressColorOptions {
+    
     /// title text (by default is Please Wait...)
     public var title: String = EZStrings.pleaseWait.rawValue
     
@@ -43,9 +51,6 @@ public enum EZAnimationOptions {
     
     /// color of title text (by default is white)
     public var titleTextColor: UIColor = .white
-    
-    /// the background transparent view color (by default is black)
-    public var transViewBackgroundColor: UIColor = UIColor.black
     
     /// the radius of the circles (by default is 115.0)
     public var radius: CGFloat = 115.0
@@ -57,10 +62,11 @@ public enum EZAnimationOptions {
     public typealias BuilderClosure = (EZProgressOptions) -> Void
     
     /// use this initializer for default setup
-    public required init() {}
+    public required override init() {}
     
     /// Customize EZProgressHUD by using this closure
     public init(options:BuilderClosure) {
+        super.init()
         options(self)
     }
 }
