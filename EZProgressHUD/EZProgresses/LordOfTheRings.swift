@@ -10,20 +10,40 @@ import UIKit
 
 final public class LordOfTheRings: EZBaseProgresses {
     public override func setAnimation() {
-        let innerPulsateArgs = TransformArguments(toValue: 1.1, duration: 0.8, option: .easeOut)
-        let transformAnimationInnerPulsate = EZAnimations.transform(with: innerPulsateArgs)
-        let mainPulsateArgs = TransformArguments(fromValue: 1.14, toValue: 0.9, duration: 2,
-                                                 option: .easeInEaseOut)
-        let mainPulsateAnimation = EZAnimations.transform(with: mainPulsateArgs)
-        let opacityAnimation = EZAnimations.opacity()
+        firstLayerNTitleAnimations()
+        secondLayerAnimations()
+        thirdLayerAnimation()
+        titleOpacityAnimation()
+    }
+}
+
+// MARK: - Methods
+
+extension LordOfTheRings {
+    
+    private func firstLayerNTitleAnimations() {
         let transformScaleArgs = TransformArguments(toValue: 1.05, duration: 1.0,
                                                     option: .easeInEaseOut)
         let transformScaleAnimation = EZAnimations.transform(with: transformScaleArgs)
-        
         firstShapeLayer.add(transformScaleAnimation, forKey: EZStrings.hsKey0.rawValue)
-        secondShapeLayer.add(mainPulsateAnimation, forKey: EZStrings.hsKey1.rawValue)
-        thirdShapeLayer.add(transformAnimationInnerPulsate, forKey: EZStrings.hsKey2.rawValue)
-        titleLabel.layer.add(opacityAnimation, forKey: EZStrings.hsKey3.rawValue)
         titleLabel.layer.add(transformScaleAnimation, forKey: EZStrings.hsKey4.rawValue)
+    }
+    
+    private func secondLayerAnimations() {
+        let mainPulsateArgs = TransformArguments(fromValue: 1.14, toValue: 0.9, duration: 2,
+                                                 option: .easeInEaseOut)
+        let mainPulsateAnimation = EZAnimations.transform(with: mainPulsateArgs)
+        secondShapeLayer.add(mainPulsateAnimation, forKey: EZStrings.hsKey1.rawValue)
+    }
+    
+    private func thirdLayerAnimation() {
+        let innerPulsateArgs = TransformArguments(toValue: 1.1, duration: 0.8, option: .easeOut)
+        let transformAnimationInnerPulsate = EZAnimations.transform(with: innerPulsateArgs)
+        thirdShapeLayer.add(transformAnimationInnerPulsate, forKey: EZStrings.hsKey2.rawValue)
+    }
+    
+    private func titleOpacityAnimation() {
+        let opacityAnimation = EZAnimations.opacity()
+        titleLabel.layer.add(opacityAnimation, forKey: EZStrings.hsKey3.rawValue)
     }
 }
