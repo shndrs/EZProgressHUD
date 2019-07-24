@@ -23,10 +23,6 @@ public struct EZProgressHUD {
             
             return HeartBeat(options: options)
             
-        case .xRotation:
-            
-            return XRotation(options: options)
-            
         case .lineLayer:
             
             return LineLayer(options: options)
@@ -34,6 +30,24 @@ public struct EZProgressHUD {
         case .lordOfTheRings:
             
             return LordOfTheRings(options: options)
+            
+        case .antColony:
+            
+            return AntColony(options: options)
+        
+        default:
+            return rotationBasedProgress(with: options)
+        }
+    }
+    
+    @discardableResult
+    private static func rotationBasedProgress(with options:EZProgressOptions)
+        -> EZProgress {
+        
+        switch options.animationOption {
+        case .xRotation:
+            
+            return XRotation(options: options)
             
         case .xyRotation:
             
@@ -43,14 +57,12 @@ public struct EZProgressHUD {
             
             return YRotation(options: options)
             
-        case .antColony:
-            
-            return AntColony(options: options)
-            
         case .hnk:
             
             return HNK(options: options)
             
+        default:
+            return HeartBeat(options: options)
         }
     }
 }
