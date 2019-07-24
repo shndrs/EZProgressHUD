@@ -9,6 +9,20 @@
 import UIKit
 
 final public class HNK: EZBaseProgresses {
+    
+    public override func setAnimation() {
+        setProperties()
+        rotationAnimations()
+        scaleAnimations()
+        dashAnimations()
+        strokeEndAndTitleAnimations()
+    }
+}
+
+// MARK: - Methods
+
+extension HNK {
+    
     fileprivate func setProperties() {
         firstShapeLayer.lineWidth = options.strokeWidth
         firstShapeLayer.lineDashPattern = [5]
@@ -18,14 +32,6 @@ final public class HNK: EZBaseProgresses {
         thirdShapeLayer.lineDashPattern = [5]
         firstShapeLayer.strokeStart = 0.0
         firstShapeLayer.strokeEnd = 0.0
-    }
-    
-    public override func setAnimation() {
-        setProperties()
-        rotationAnimations()
-        scaleAnimations()
-        dashAnimations()
-        strokeEndAndTitleAnimations()
     }
     
     private func rotationAnimations() {
