@@ -12,7 +12,7 @@ final public class HNK: EZBaseProgresses {
     
     public override func setAnimation() {
         setProperties()
-        rotationAnimations()
+        yRotationAnimation()
         scaleAnimations()
         dashAnimations()
         strokeEndAndTitleAnimations()
@@ -34,7 +34,7 @@ extension HNK {
         firstShapeLayer.strokeEnd = 0.0
     }
     
-    private func rotationAnimations() {
+    private func yRotationAnimation() {
         let rotationYAnimation = EZAnimations.rotation(duration: 6,
                                                        rotationMode: .yRotation)
         secondShapeLayer.add(rotationYAnimation, forKey: EZStrings.hsKey1.rawValue)
