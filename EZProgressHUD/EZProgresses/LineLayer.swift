@@ -18,24 +18,10 @@ final public class LineLayer: EZBaseProgresses {
     
     public override func setAnimation() {
         setProperties()
-        let lineDashArgs = LineDashPhaseArguments(byValue: 158.0,
-                                                  autoreverse: true, duration: 3.75,
-                                                  option: .easeInEaseOut)
-        let lineDashPhaseAnimation = EZAnimations.lineDashPhase(with: lineDashArgs)
-        let lineWidthAnimation = EZAnimations.lineWidth(toValue: (options.strokeWidth / 4) + 2.5,
-                                                        duration: 0.3)
-        let scaleTransformArgs = TransformArguments(toValue: 1.06, duration: 1.1, option: .easeIn)
-        let scaleTransformAnimation = EZAnimations.transform(with: scaleTransformArgs)
-        let thirdLineWidthAnimation = EZAnimations
-            .lineWidth(toValue: (options.strokeWidth - 1.0), duration: 0.3)
-        let opacityAnimation = EZAnimations.opacity()
-        let strokeEndAnimation = EZAnimations.strokeEndAnimation(duration: 2)
-        secondShapeLayer.add(scaleTransformAnimation, forKey: EZStrings.hsKey0.rawValue)
-        thirdShapeLayer.add(thirdLineWidthAnimation, forKey: EZStrings.hsKey1.rawValue)
-        titleLabel.layer.add(opacityAnimation, forKey: EZStrings.hsKey2.rawValue)
-        firstShapeLayer.add(lineWidthAnimation, forKey: EZStrings.hsKey3.rawValue)
-        firstShapeLayer.add(lineDashPhaseAnimation, forKey: EZStrings.hsKey4.rawValue)
-        firstShapeLayer.add(strokeEndAnimation, forKey: EZStrings.hsKey5.rawValue)
+        scaleTransformAnimation()
+        lineWidthAnimations()
+        lineDashAnimations()
+        opacityAndStrokeAnimations()
     }
 }
 
@@ -43,6 +29,34 @@ final public class LineLayer: EZBaseProgresses {
 
 extension LineLayer {
     
+    private func scaleTransformAnimation() {
+        let scaleTransformArgs = TransformArguments(toValue: 1.06, duration: 1.1, option: .easeIn)
+        let scaleTransformAnimation = EZAnimations.transform(with: scaleTransformArgs)
+        secondShapeLayer.add(scaleTransformAnimation, forKey: EZStrings.hsKey0.rawValue)
+    }
     
+    private func lineWidthAnimations() {
+        let thirdLineWidthAnimation = EZAnimations
+            .lineWidth(toValue: (options.strokeWidth - 1.0), duration: 0.3)
+        let lineWidthAnimation = EZAnimations
+            .lineWidth(toValue: (options.strokeWidth / 4) + 2.5,
+                       duration: 0.3)
+        thirdShapeLayer.add(thirdLineWidthAnimation, forKey: EZStrings.hsKey1.rawValue)
+        firstShapeLayer.add(lineWidthAnimation, forKey: EZStrings.hsKey3.rawValue)
+    }
     
+    private func lineDashAnimations() {
+        let lineDashArgs = LineDashPhaseArguments(byValue: 158.0,
+                                                  autoreverse: true, duration: 3.75,
+                                                  option: .easeInEaseOut)
+        let lineDashPhaseAnimation = EZAnimations.lineDashPhase(with: lineDashArgs)
+        firstShapeLayer.add(lineDashPhaseAnimation, forKey: EZStrings.hsKey4.rawValue)
+    }
+    
+    private func opacityAndStrokeAnimations() {
+        let opacityAnimation = EZAnimations.opacity()
+        let strokeEndAnimation = EZAnimations.strokeEndAnimation(duration: 2)
+        titleLabel.layer.add(opacityAnimation, forKey: EZStrings.hsKey2.rawValue)
+        firstShapeLayer.add(strokeEndAnimation, forKey: EZStrings.hsKey5.rawValue)
+    }
 }
