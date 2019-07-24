@@ -46,9 +46,9 @@ extension LineLayer {
     }
     
     private func lineDashAnimations() {
+        let baseArgs = BaseAnimationArgument(duration: 3.75, option: .easeInEaseOut)
         let lineDashArgs = LineDashPhaseArguments(byValue: 158.0,
-                                                  autoreverse: true, duration: 3.75,
-                                                  option: .easeInEaseOut)
+                                                  autoreverse: true, base: baseArgs)
         let lineDashPhaseAnimation = EZAnimations.lineDashPhase(with: lineDashArgs)
         firstShapeLayer.add(lineDashPhaseAnimation, forKey: EZStrings.hsKey4.rawValue)
     }

@@ -42,10 +42,9 @@ public final class LineDashPhaseArguments: BaseAnimationArgument {
     
     public init(byValue:Any,
                 autoreverse:Bool = false,
-                duration: CFTimeInterval,
-                option:CAMediaTimingFunctionName) {
+                base:BaseAnimationArgument) {
         self.byValue = byValue
         self.autoreverse = autoreverse
-        super.init(duration: duration, option: option)
+        super.init(duration: base.duration, option: base.option)
     }
 }

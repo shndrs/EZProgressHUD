@@ -49,8 +49,8 @@ extension AntColony {
     }
     
     private func lineDashAnimation() {
-        let lineDashArgs = LineDashPhaseArguments(byValue: 10.0, duration: 0.75,
-                                                  option: .linear)
+        let baseArgs = BaseAnimationArgument(duration: 0.75, option: .linear)
+        let lineDashArgs = LineDashPhaseArguments(byValue: 10.0, base: baseArgs)
         let lineDashPhaseAnimation = EZAnimations.lineDashPhase(with: lineDashArgs)
         firstShapeLayer.add(lineDashPhaseAnimation, forKey: EZStrings.hsKey4.rawValue)
     }
