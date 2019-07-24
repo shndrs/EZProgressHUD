@@ -30,7 +30,7 @@ extension YRotation {
         thirdShapeLayer.add(transformAnimationInnerPulsate, forKey: EZStrings.hsKey2.rawValue)
     }
     
-    private func rortaionYAnimation() {
+    private func rotationYAnimation() {
         let rotationYAnimation = EZAnimations.rotation(duration: 4,
                                                        rotationMode: .yRotation)
         secondShapeLayer.add(rotationYAnimation, forKey: EZStrings.hsKey1.rawValue)

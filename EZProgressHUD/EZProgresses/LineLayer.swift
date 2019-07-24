@@ -38,3 +38,11 @@ final public class LineLayer: EZBaseProgresses {
         firstShapeLayer.add(strokeEndAnimation, forKey: EZStrings.hsKey5.rawValue)
     }
 }
+
+// MARK: - Methods
+
+extension LineLayer {
+    
+    
+    
+}

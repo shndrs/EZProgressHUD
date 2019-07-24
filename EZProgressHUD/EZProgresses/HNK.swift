@@ -35,9 +35,9 @@ extension HNK {
     }
     
     private func yRotationAnimation() {
-        let rotationYAnimation = EZAnimations.rotation(duration: 6,
-                                                       rotationMode: .yRotation)
-        secondShapeLayer.add(rotationYAnimation, forKey: EZStrings.hsKey1.rawValue)
+        let rotationY = EZAnimations.rotation(duration: 6,
+                                              rotationMode: .yRotation)
+        secondShapeLayer.add(rotationY, forKey: EZStrings.hsKey8.rawValue)
     }
     
     private func scaleAnimations() {
