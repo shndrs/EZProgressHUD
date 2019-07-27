@@ -10,16 +10,33 @@ import UIKit
 
 final public class XYRotation: EZBaseProgresses {
     public override func setAnimation() {
+        rotationAnimations()
+        transformScaleAnimation()
+        opacityAnimation()
+    }
+}
+
+// MARK: - Methods
+
+extension XYRotation {
+    
+    private func rotationAnimations() {
         let rotationXAnimation = EZAnimations.rotation(duration: 6,
                                                        rotationMode: .xRotation)
         let rotationYAnimation = EZAnimations.rotation(duration: 3,
                                                        rotationMode: .yRotation)
-        let args = TransformArguments(toValue: 1.06, duration: 1.0, option: .easeInEaseOut)
-        let transformScaleAnimation = EZAnimations.transform(with: args)
-        let opacityAnimation = EZAnimations.opacity()
-        firstShapeLayer.add(transformScaleAnimation, forKey: EZStrings.hsKey0.rawValue)
         secondShapeLayer.add(rotationXAnimation, forKey: EZStrings.hsKey1.rawValue)
         thirdShapeLayer.add(rotationYAnimation, forKey: EZStrings.hsKey2.rawValue)
+    }
+    
+    private func transformScaleAnimation() {
+        let args = TransformArguments(toValue: 1.06, duration: 1.0, option: .easeInEaseOut)
+        let transformScaleAnimation = EZAnimations.transform(with: args)
+        firstShapeLayer.add(transformScaleAnimation, forKey: EZStrings.hsKey0.rawValue)
+    }
+    
+    private func opacityAnimation() {
+        let opacityAnimation = EZAnimations.opacity()
         titleLabel.layer.add(opacityAnimation, forKey: EZStrings.hsKey3.rawValue)
     }
 }
