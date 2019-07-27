@@ -41,11 +41,12 @@ extension HNK {
     }
     
     private func scaleAnimations() {
-        let transformScaleArgs = TransformArguments(toValue: 0.96, duration: 2.0,
-                                                    option: .easeInEaseOut)
+        let baseArgs = BaseAnimationArgument(duration: 2.0, option: .easeInEaseOut)
+        let transformScaleArgs = TransformArguments(toValue: 0.96, base: baseArgs)
         let transformScaleAnimation = EZAnimations.transform(with: transformScaleArgs)
+        let secondBaseArgs = BaseAnimationArgument(duration: 4.0, option: .easeInEaseOut)
         let transformScaleArgs3 = TransformArguments(fromValue: 1.04, toValue: 1.09,
-                                                     duration: 4, option: .easeInEaseOut)
+                                                     base: secondBaseArgs)
         let transformScaleAnimation3 = EZAnimations.transform(with: transformScaleArgs3)
         firstShapeLayer.add(transformScaleAnimation, forKey: EZStrings.hsKey0.rawValue)
         thirdShapeLayer.add(transformScaleAnimation3, forKey: EZStrings.hsKey2.rawValue)

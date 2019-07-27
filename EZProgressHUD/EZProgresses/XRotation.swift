@@ -21,11 +21,11 @@ final public class XRotation: EZBaseProgresses {
 extension XRotation {
     
     private func transformScale() {
-        let innerPulsateArgs = TransformArguments(toValue: 1.1, duration: 0.8,
-                                                  option: .easeOut)
+        let baseArgs = BaseAnimationArgument(duration: 0.8, option: .easeOut)
+        let innerPulsateArgs = TransformArguments(toValue: 1.1, base: baseArgs)
         let transformAnimationInnerPulsate = EZAnimations.transform(with: innerPulsateArgs)
-        let transformScaleArgs = TransformArguments(toValue: 1.05, duration: 1.0,
-                                                    option: .easeInEaseOut)
+        let secondBaseArgs = BaseAnimationArgument(duration: 1.0, option: .easeInEaseOut)
+        let transformScaleArgs = TransformArguments(toValue: 1.05, base: secondBaseArgs)
         let transformScaleAnimation = EZAnimations.transform(with: transformScaleArgs)
         firstShapeLayer.add(transformScaleAnimation, forKey: EZStrings.hsKey0.rawValue)
         titleLabel.layer.add(transformScaleAnimation, forKey: EZStrings.hsKey4.rawValue)

@@ -20,9 +20,11 @@ final public class HeartBeat: EZBaseProgresses {
 extension HeartBeat {
     
     private func transformAnimations() {
-        let transformAnimationObj = TransformArguments(toValue: 1.07, duration: 0.8, option: .easeOut)
+        let baseArgs = BaseAnimationArgument(duration: 0.8, option: .easeOut)
+        let transformAnimationObj = TransformArguments(toValue: 1.07, base: baseArgs)
         let transformAnimation = EZAnimations.transform(with: transformAnimationObj)
-        let innerPulsateObj = TransformArguments(toValue: 0.95, duration: 1.6, option: .easeOut)
+        let secondBaseArgs = BaseAnimationArgument(duration: 1.6, option: .easeOut)
+        let innerPulsateObj = TransformArguments(toValue: 0.95, base: secondBaseArgs)
         let transformAnimationInnerPulsate = EZAnimations.transform(with: innerPulsateObj)
         secondShapeLayer.add(transformAnimation,
                              forKey: EZStrings.hsKey0.rawValue)

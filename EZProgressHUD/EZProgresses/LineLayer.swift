@@ -30,7 +30,8 @@ final public class LineLayer: EZBaseProgresses {
 extension LineLayer {
     
     private func scaleTransformAnimation() {
-        let scaleTransformArgs = TransformArguments(toValue: 1.06, duration: 1.1, option: .easeIn)
+        let baseArgs = BaseAnimationArgument(duration: 1.1, option: .easeIn)
+        let scaleTransformArgs = TransformArguments(toValue: 1.06, base: baseArgs)
         let scaleTransformAnimation = EZAnimations.transform(with: scaleTransformArgs)
         secondShapeLayer.add(scaleTransformAnimation, forKey: EZStrings.hsKey0.rawValue)
     }

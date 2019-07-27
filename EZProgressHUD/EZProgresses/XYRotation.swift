@@ -30,7 +30,8 @@ extension XYRotation {
     }
     
     private func transformScaleAnimation() {
-        let args = TransformArguments(toValue: 1.06, duration: 1.0, option: .easeInEaseOut)
+        let baseArgs = BaseAnimationArgument(duration: 1.0, option: .easeInEaseOut)
+        let args = TransformArguments(toValue: 1.06, base: baseArgs)
         let transformScaleAnimation = EZAnimations.transform(with: args)
         firstShapeLayer.add(transformScaleAnimation, forKey: EZStrings.hsKey0.rawValue)
     }

@@ -26,12 +26,11 @@ public final class TransformArguments: BaseAnimationArgument {
     
     public init(fromValue: Any = 1,
                 toValue:Any,
-                duration: CFTimeInterval,
-                option:CAMediaTimingFunctionName) {
+                base: BaseAnimationArgument) {
         
         self.fromValue = fromValue
         self.toValue = toValue
-        super.init(duration: duration, option: option)
+        super.init(duration: base.duration, option: base.option)
     }
 }
 

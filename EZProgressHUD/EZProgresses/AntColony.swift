@@ -29,8 +29,9 @@ extension AntColony {
     }
     
     private func scaleTransformAnimation() {
+        let baseArgs = BaseAnimationArgument(duration: 2.0, option: .linear)
         let scaleTransformArgs = TransformArguments(fromValue: 1.14, toValue: 0.93,
-                                                    duration: 2, option: .linear)
+                                                    base: baseArgs)
         let scaleTransformAnimation = EZAnimations.transform(with: scaleTransformArgs)
         secondShapeLayer.add(scaleTransformAnimation, forKey: EZStrings.hsKey1.rawValue)
     }
