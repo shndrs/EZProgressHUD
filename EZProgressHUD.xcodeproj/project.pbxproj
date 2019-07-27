@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F458A3B822EC1DE600997C19 /* EZProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4EAFB3322D31F2800689062 /* EZProgressHUD.framework */; };
+		F458A3B922EC1DE600997C19 /* EZProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F4EAFB3322D31F2800689062 /* EZProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F485D05F22DDCB9100EEFED9 /* EZAnimationArgument.swift in Sources */ = {isa = PBXBuildFile; fileRef = F485D05E22DDCB9100EEFED9 /* EZAnimationArgument.swift */; };
 		F485D06122DDDD8A00EEFED9 /* EZBaseProgresses.swift in Sources */ = {isa = PBXBuildFile; fileRef = F485D06022DDDD8A00EEFED9 /* EZBaseProgresses.swift */; };
-		F4A9A70422D9BC5A006467C9 /* EZProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4EAFB3322D31F2800689062 /* EZProgressHUD.framework */; };
 		F4EAFB3D22D31F2800689062 /* EZProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4EAFB3322D31F2800689062 /* EZProgressHUD.framework */; };
 		F4EAFB4222D31F2800689062 /* EZProgressHUDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EAFB4122D31F2800689062 /* EZProgressHUDTests.swift */; };
 		F4EAFB4422D31F2800689062 /* EZProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = F4EAFB3622D31F2800689062 /* EZProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -38,6 +39,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		F458A3BA22EC1DE600997C19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4EAFB2A22D31F2800689062 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4EAFB3222D31F2800689062;
+			remoteInfo = EZProgressHUD;
+		};
 		F4EAFB3E22D31F2800689062 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F4EAFB2A22D31F2800689062 /* Project object */;
@@ -46,6 +54,20 @@
 			remoteInfo = EZProgressHUD;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F458A3BC22EC1DE700997C19 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F458A3B922EC1DE600997C19 /* EZProgressHUD.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F485D05E22DDCB9100EEFED9 /* EZAnimationArgument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZAnimationArgument.swift; sourceTree = "<group>"; };
@@ -102,7 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4A9A70422D9BC5A006467C9 /* EZProgressHUD.framework in Frameworks */,
+				F458A3B822EC1DE600997C19 /* EZProgressHUD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,10 +346,12 @@
 				F4EAFB4D22D3292E00689062 /* Sources */,
 				F4EAFB4E22D3292E00689062 /* Frameworks */,
 				F4EAFB4F22D3292E00689062 /* Resources */,
+				F458A3BC22EC1DE700997C19 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F458A3BB22EC1DE600997C19 /* PBXTargetDependency */,
 			);
 			name = EZProgressHUDExamples;
 			productName = EZProgressHUDExamples;
@@ -450,6 +474,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		F458A3BB22EC1DE600997C19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4EAFB3222D31F2800689062 /* EZProgressHUD */;
+			targetProxy = F458A3BA22EC1DE600997C19 /* PBXContainerItemProxy */;
+		};
 		F4EAFB3F22D31F2800689062 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F4EAFB3222D31F2800689062 /* EZProgressHUD */;
@@ -697,9 +726,10 @@
 		F4EAFB6122D3293000689062 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = KRGCDU34JU;
 				INFOPLIST_FILE = EZProgressHUDExamples/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -716,9 +746,10 @@
 		F4EAFB6222D3293000689062 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = KRGCDU34JU;
 				INFOPLIST_FILE = EZProgressHUDExamples/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
