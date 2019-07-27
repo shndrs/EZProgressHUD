@@ -117,7 +117,7 @@ pod 'EZProgressHUD', '~> 1.4.3'
 ### Swift 5
 
 ```ruby
-pod `EZProgressHUD`, `~> 1.5.2`
+pod `EZProgressHUD`, `~> 1.5.3`
 ```
 And then on your terminal run 👇🏻:
 ```bash
@@ -135,7 +135,7 @@ github "shndrs/EZProgressHUD" "1.4.3"
 ```
 ### Swift 5
 ```bash
-github "shndrs/EZProgressHUD" "1.5.2"
+github "shndrs/EZProgressHUD" "1.5.3"
 ```
 And then on your terminal run 👇🏻:
 ```bash
