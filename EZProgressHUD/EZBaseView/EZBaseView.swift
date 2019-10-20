@@ -111,7 +111,8 @@ open class EZBaseView: UIView {
                        animations: { [weak self] in
                         
             guard let self = self else { return }
-            (self.transView.alpha == 1) ? (self.transView.alpha = 0) : (self.transView.alpha = 1)
+                        
+            (self.transView.alpha != 0) ? (self.transView.alpha = 0) : (self.transView.alpha = 1)
         }, completion: completion)
     }
 }
