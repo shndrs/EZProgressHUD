@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "EZProgressHUD"
-  spec.version      = "1.4.0"
+  spec.version      = "1.5.3"
   spec.summary      = "A very cool and easy to use activity indicator for iOS Application ;) Hope you fellas enjoy it 😊😊"
 
   spec.description  = <<-DESC
@@ -15,7 +15,7 @@ hope you guys enjoy it. -shndrs -hnk
   spec.author             = { "shndrs" => "sahandraeisi1994@gmail.com" }
 
   spec.ios.deployment_target = "9.3"
-  spec.swift_version = "4.2"
+  spec.swift_version = "5"
 
 
   spec.source       = { :git => "https://github.com/shndrs/EZProgressHUD.git", :tag => "#{spec.version}" }

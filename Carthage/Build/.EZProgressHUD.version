@@ -8,12 +8,12 @@
   "tvOS" : [
 
   ],
-  "commitish" : "194e0724ebc19b2622d02645e0274030fe10dcaf",
+  "commitish" : "1.5.3",
   "iOS" : [
     {
       "name" : "EZProgressHUD",
-      "hash" : "dd3de2168e1522474c300b0d6b17f0296169c25577a62366fe70abefb84fb71e",
-      "swiftToolchainVersion" : "4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+      "hash" : "7dfbe0bc05a8946f5f52885ed915659ad2f0e2c0dc9a8d0732e14d8427b09143",
+      "swiftToolchainVersion" : "5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)"
     }
   ]
 }
