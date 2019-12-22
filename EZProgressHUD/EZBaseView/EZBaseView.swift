@@ -106,12 +106,13 @@ open class EZBaseView: UIView {
     
     private func transViewAnimation(completion: ((Bool) -> Void)?) {
         
-        UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseInOut, animations: {
-            if self.transView.alpha == 1 {
-                self.transView.alpha = 0
-            } else {
-                self.transView.alpha = 1
-            }
+        UIView.animate(withDuration: 0.2, delay: 0.0,
+                       options: .curveEaseInOut,
+                       animations: { [weak self] in
+                        
+            guard let self = self else { return }
+                        
+            (self.transView.alpha != 0) ? (self.transView.alpha = 0) : (self.transView.alpha = 1)
         }, completion: completion)
     }
 }

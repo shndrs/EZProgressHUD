@@ -10,6 +10,7 @@
 ![license](https://img.shields.io/cocoapods/l/EZProgressHUD.svg)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-000000.svg?style=flat)](https://github.com/Carthage/Carthage)
 ![cocoapods](https://img.shields.io/badge/CocoaPods-compatible-000000.svg)
+![release-date](https://img.shields.io/github/release-date/shndrs/EZProgressHUD)
 
 As we said in short description, this is a very cool customizable and easy to use activity indicator for iOS and guess what!!?? Android Application(coming soon...) hope you guys enjoy it 😊😊
 
