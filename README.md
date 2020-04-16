@@ -12,7 +12,7 @@
 ![cocoapods](https://img.shields.io/badge/CocoaPods-compatible-000000.svg)
 ![release-date](https://img.shields.io/github/release-date/shndrs/EZProgressHUD)
 
-As we said in short description, this is a very cool customizable and easy to use activity indicator for iOS and guess what!!?? Android Application(coming soon...) hope you guys enjoy it 😊😊
+As we said in short description, this is a very cool customizable and easy to use activity indicator for iOS applications
 
 ![AntColony-C](https://user-images.githubusercontent.com/34839080/60947619-34a6f900-a306-11e9-84d3-88327e42ac80.gif)
 ![HNK-C](https://user-images.githubusercontent.com/34839080/60947609-32dd3580-a306-11e9-939d-0489651cbbed.gif)
@@ -152,4 +152,4 @@ EZProgressHUD is available under the MIT license. See the LICENSE file for more 
 
 Credit
 =======
-EZProgressHUD is brought to you in iOS Swift by [Sahand Raeisi - shndrs](https://github.com/shndrs) and in Android Java by [Hanieh Nikjoo - hnk](https://github.com/HaniehNikjoo)
+EZProgressHUD is brought to you in iOS Swift by [Sahand Raeisi - shndrs](https://github.com/shndrs)
