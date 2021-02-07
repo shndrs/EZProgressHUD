@@ -17,6 +17,7 @@ final public class AntColony: EZBaseProgresses {
         titleAnimations()
         lineDashAnimation()
     }
+    
 }
 
 // MARK: - Methods

@@ -9,10 +9,12 @@
 import UIKit
 
 final public class HeartBeat: EZBaseProgresses {
+    
     public override func setAnimation() {
         transformAnimations()
         titleAnimations()
     }
+    
 }
 
 // MARK: -  Methods
@@ -35,10 +37,10 @@ extension HeartBeat {
     private func titleAnimations() {
         let opacityAnimation = EZAnimations.opacity()
         let transformXScaleAnimation = EZAnimations.transformX()
-        
         titleLabel.layer.add(opacityAnimation,
                              forKey: EZStrings.hsKey2.rawValue)
         titleLabel.layer.add(transformXScaleAnimation,
                              forKey: EZStrings.hsKey3.rawValue)
     }
+    
 }

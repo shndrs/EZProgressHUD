@@ -17,6 +17,7 @@ public class BaseAnimationArgument {
         self.duration = duration
         self.option = option
     }
+    
 }
 
 public final class TransformArguments: BaseAnimationArgument {
@@ -32,6 +33,7 @@ public final class TransformArguments: BaseAnimationArgument {
         self.toValue = toValue
         super.init(duration: base.duration, option: base.option)
     }
+    
 }
 
 public final class LineDashPhaseArguments: BaseAnimationArgument {
@@ -46,4 +48,5 @@ public final class LineDashPhaseArguments: BaseAnimationArgument {
         self.autoreverse = autoreverse
         super.init(duration: base.duration, option: base.option)
     }
+    
 }

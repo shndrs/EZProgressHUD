@@ -64,9 +64,7 @@ open class EZBaseView: UIView {
     
     /// this method set the circles position, path, fillColor and.........
     public func layerGenerator(shapeLayer: CAShapeLayer, type: ShapeLayerType) {
-        
         switch type {
-            
         case .firstShapeLayer:
             shapeLayer.strokeColor = options.firstLayerStrokeColor.cgColor
         case .secondShapeLayer:
@@ -74,12 +72,10 @@ open class EZBaseView: UIView {
         case .thirdShapeLayer:
             shapeLayer.strokeColor = options.thirdLayerStrokeColor.cgColor
         }
-        
         let circularTrackPath = UIBezierPath(arcCenter: .zero,
                                              radius: options.radius,
                                              startAngle: -(.pi) , endAngle:2 * .pi,
                                              clockwise: true)
-        
         shapeLayer.position = transView.center
         shapeLayer.path = circularTrackPath.cgPath
         shapeLayer.lineWidth = options.strokeWidth
@@ -88,14 +84,12 @@ open class EZBaseView: UIView {
     }
     
     public func showBlock() {
-        
         UIApplication.shared.keyWindow?.isUserInteractionEnabled = false
         UIApplication.shared.keyWindow?.addSubview(transView)
         transViewAnimation(completion: nil)
     }
     
     public func dismissBlock(completion: (() -> Void)?) {
-        
         let completionHandler = { (success:Bool) in
             self.transView.removeFromSuperview()
             UIApplication.shared.keyWindow?.isUserInteractionEnabled = true
@@ -109,10 +103,9 @@ open class EZBaseView: UIView {
         UIView.animate(withDuration: 0.2, delay: 0.0,
                        options: .curveEaseInOut,
                        animations: { [weak self] in
-                        
             guard let self = self else { return }
-                        
             (self.transView.alpha != 0) ? (self.transView.alpha = 0) : (self.transView.alpha = 1)
         }, completion: completion)
     }
+    
 }

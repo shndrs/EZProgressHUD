@@ -25,11 +25,8 @@ class EZProgressHUDTests: XCTestCase {
             options.title = "shndrs presents"
             options.animationOption = EZAnimationOptions.hnk
         }
-        
         XCTAssertNotNil(options)
-        
         let hud = EZProgressHUD.setProgress(with: options)
-        
         XCTAssertNotNil(hud)
     }
     
@@ -45,34 +42,23 @@ class EZProgressHUDTests: XCTestCase {
         options.titleTextColor = .white
         options.transViewBackgroundColor = .black
         options.animationOption = EZAnimationOptions.lordOfTheRings
-        
         XCTAssertNotNil(options)
-        
         let hud = EZProgressHUD.setProgress(with: options)
-        
         XCTAssertNotNil(hud)
     }
     
     func defaultHudTest() {
-        
         let options = EZProgressOptions()
-        
         XCTAssertNotNil(options, "Not Nil")
-        
         let hud = EZProgressHUD.setProgress(with: options)
-        
         XCTAssertNotNil(hud)
-        
         let opts = EZProgressOptions { (_) in }
         XCTAssertNotNil(opts)
-        
         let hd = EZProgressHUD.setProgress(with: opts)
-        
         XCTAssertNotNil(hd)
     }
 
     func testPerformanceExample() {
-        
         self.measure {
             hnkTest()
             defaultHudTest()

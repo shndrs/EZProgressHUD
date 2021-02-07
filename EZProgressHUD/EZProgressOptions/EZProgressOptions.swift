@@ -33,6 +33,7 @@ public class EZTitleOptions {
     
     /// color of title text (by default is white)
     public var titleTextColor: UIColor = .white
+    
 }
 
 @requires_stored_property_inits
@@ -51,6 +52,7 @@ public class EZProgressColorOptions: EZTitleOptions {
     
     /// the background transparent view color (by default is black)
     public var transViewBackgroundColor: UIColor = UIColor.black
+    
 }
 
 @requires_stored_property_inits
@@ -73,5 +75,5 @@ public class EZProgressOptions: EZProgressColorOptions {
         super.init()
         options(self)
     }
+    
 }
-

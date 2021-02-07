@@ -34,7 +34,6 @@ final class ViewController: UIViewController {
     // MARK: - LineLayer HUD
     
     @IBAction private func lineLayerButtonPressed(_ sender: UIButton) {
-        
         let color = UIColor(red: 255/255, green: 190/255, blue: 0/255, alpha: 1)
         let options = EZProgressOptions { (option) in
             option.radius = 120
@@ -45,10 +44,8 @@ final class ViewController: UIViewController {
             option.title = "shndrs presents"
             option.animationOption = EZAnimationOptions.lineLayer
         }
-        
         let hud = EZProgressHUD.setProgress(with: options)
         hud.show()
-        
         DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
             hud.dismiss(completion: nil)
         }
@@ -57,7 +54,6 @@ final class ViewController: UIViewController {
     // MARK: - LordOfTheRings HUD
     
     @IBAction private func lordOfTheRingsButtonPressed(_ sender: UIButton) {
-        
         let options = EZProgressOptions { (option) in
             option.radius = 120
             option.secondLayerStrokeColor = .white
@@ -67,10 +63,8 @@ final class ViewController: UIViewController {
             option.title = "shndrs presents"
             option.animationOption = EZAnimationOptions.lordOfTheRings
         }
-        
         let hud = EZProgressHUD.setProgress(with: options)
         hud.show()
-        
         DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
             hud.dismiss(completion: nil)
         }
@@ -79,7 +73,6 @@ final class ViewController: UIViewController {
     // MARK: - XRotation HUD
     
     @IBAction private func xRotationButtonPressed(_ sender: UIButton) {
-        
         let options = EZProgressOptions { (option) in
             option.radius = 115
             option.secondLayerStrokeColor = .brown
@@ -89,10 +82,8 @@ final class ViewController: UIViewController {
             option.title = "shndrs presents"
             option.animationOption = EZAnimationOptions.xRotation
         }
-        
         let hud = EZProgressHUD.setProgress(with: options)
         hud.show()
-        
         DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
             hud.dismiss(completion: nil)
         }
@@ -101,7 +92,6 @@ final class ViewController: UIViewController {
     // MARK: - YRotation HUD
     
     @IBAction private func yRotationButtonPressed(_ sender: UIButton) {
-        
         let options = EZProgressOptions { (option) in
             option.radius = 117
             option.secondLayerStrokeColor = green
@@ -111,10 +101,8 @@ final class ViewController: UIViewController {
             option.title = "shndrs presents"
             option.animationOption = EZAnimationOptions.yRotation
         }
-        
         let hud = EZProgressHUD.setProgress(with: options)
         hud.show()
-        
         DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
             hud.dismiss(completion: nil)
         }
@@ -132,10 +120,8 @@ final class ViewController: UIViewController {
             option.title = "shndrs presents"
             option.animationOption = EZAnimationOptions.xyRotation
         }
-        
         let hud = EZProgressHUD.setProgress(with: options)
         hud.show()
-        
         DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
             hud.dismiss(completion: nil)
         }
@@ -144,7 +130,6 @@ final class ViewController: UIViewController {
     // MARK: - AntColony HUD
     
     @IBAction private func antColonyButtonPressed(_ sender: UIButton) {
-        
         let options = EZProgressOptions { (option) in
             option.radius = 120
             option.secondLayerStrokeColor = darkGray
@@ -154,10 +139,8 @@ final class ViewController: UIViewController {
             option.title = "shndrs presents"
             option.animationOption = EZAnimationOptions.antColony
         }
-        
         let hud = EZProgressHUD.setProgress(with: options)
         hud.show()
-        
         DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
             hud.dismiss(completion: nil)
         }
@@ -166,7 +149,6 @@ final class ViewController: UIViewController {
     //MARK: - HNK HUD
     
     @IBAction private func hnkButtonPressed(_ sender: UIButton) {
-        
         let options = EZProgressOptions { (option) in
             option.radius = 115
             option.secondLayerStrokeColor = niceBlue
@@ -176,12 +158,11 @@ final class ViewController: UIViewController {
             option.title = "shndrs presents"
             option.animationOption = EZAnimationOptions.hnk
         }
-        
         let hud = EZProgressHUD.setProgress(with: options)
         hud.show()
-        
         DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
             hud.dismiss(completion: nil)
         }
     }
+    
 }

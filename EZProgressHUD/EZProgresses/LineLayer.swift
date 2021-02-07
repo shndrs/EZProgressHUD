@@ -9,6 +9,7 @@
 import UIKit
 
 final public class LineLayer: EZBaseProgresses {
+    
     fileprivate func setProperties() {
         firstShapeLayer.lineWidth = (options.strokeWidth / 4) + 1
         firstShapeLayer.lineDashPattern = [5]
@@ -23,6 +24,7 @@ final public class LineLayer: EZBaseProgresses {
         lineDashAnimations()
         opacityAndStrokeAnimations()
     }
+    
 }
 
 // MARK: - Methods

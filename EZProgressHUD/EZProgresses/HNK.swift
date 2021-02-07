@@ -17,6 +17,7 @@ final public class HNK: EZBaseProgresses {
         dashAnimations()
         strokeEndAndTitleAnimations()
     }
+    
 }
 
 // MARK: - Methods
@@ -70,4 +71,5 @@ extension HNK {
         titleLabel.layer.add(opacityAnimation, forKey: EZStrings.hsKey3.rawValue)
         firstShapeLayer.add(strokeEndAnimation, forKey: EZStrings.hsKey7.rawValue)
     }
+    
 }

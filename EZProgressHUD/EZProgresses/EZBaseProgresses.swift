@@ -13,6 +13,7 @@ public class EZBaseProgresses: EZBaseView {}
 // MARK: EZProgressProtocol Impelementation
 
 extension EZBaseProgresses: EZProgress {
+    
     public func show() {
         setLayers()
         showBlock()
@@ -21,6 +22,7 @@ extension EZBaseProgresses: EZProgress {
     public func dismiss(completion: (() -> Void)?) {
         dismissBlock(completion: completion)
     }
+    
 }
 
 // MARK: Set Animation And Layers

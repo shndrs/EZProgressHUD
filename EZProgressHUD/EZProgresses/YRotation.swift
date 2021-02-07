@@ -9,11 +9,13 @@
 import UIKit
 
 final public class YRotation: EZBaseProgresses {
+    
     public override func setAnimation() {
         transformScaleAnimations()
         rotationYAnimation()
         opacityAnimation()
     }
+    
 }
 
 // MARK: - Methods

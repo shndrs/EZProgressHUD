@@ -9,11 +9,13 @@
 import UIKit
 
 final public class XRotation: EZBaseProgresses {
+    
     public override func setAnimation() {
         transformScale()
         xRotation()
         opacity()
     }
+    
 }
 
 // MARK: - Methods

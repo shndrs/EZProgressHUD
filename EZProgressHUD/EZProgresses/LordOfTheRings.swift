@@ -9,12 +9,14 @@
 import UIKit
 
 final public class LordOfTheRings: EZBaseProgresses {
+    
     public override func setAnimation() {
         firstLayerNTitleAnimations()
         secondLayerAnimations()
         thirdLayerAnimation()
         titleOpacityAnimation()
     }
+    
 }
 
 // MARK: - Methods

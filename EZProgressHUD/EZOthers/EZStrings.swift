@@ -30,5 +30,5 @@ public enum EZStrings:String {
     case hsKey7
     case hsKey8
     case hsKey9
+    
 }
-
