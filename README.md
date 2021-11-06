@@ -107,18 +107,11 @@ Installation
 
  <img src="https://raw.githubusercontent.com/CocoaPods/shared_resources/master/img/CocoaPods-Logo-Highlight.png" width="128px" height="32px" />
 
-SwiftyTabBarTransition is available through [CocoaPods](https://cocoapods.org/pods/EZProgressHUD). To install
-it in latest version, simply add the following line to your Podfile:
-
-### Swift 4.2
+EZProgressHUD is available through [CocoaPods](https://cocoapods.org/pods/EZProgressHUD). To install
+the latest version, simply add the following line to your Podfile:
 
 ```ruby
-pod 'EZProgressHUD', '~> 1.4.3'
-```
-### Swift 5
-
-```ruby
-pod `EZProgressHUD`, `~> 1.5.3`
+pod `EZProgressHUD`
 ```
 And then on your terminal run 👇🏻:
 ```bash
@@ -129,14 +122,8 @@ pod install
 
 To get the latest version of library using [Carthage](https://github.com/Carthage/Carthage), you can add following line to your Cartfile.
 
-### Swift 4.2
-
 ```bash
-github "shndrs/EZProgressHUD" "1.4.3"
-```
-### Swift 5
-```bash
-github "shndrs/EZProgressHUD" "1.5.3"
+github "shndrs/EZProgressHUD"
 ```
 And then on your terminal run 👇🏻:
 ```bash
